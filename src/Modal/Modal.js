@@ -1,8 +1,83 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Table from '../Table/Table';
+import { db } from '../firebase-config';
+import {
+  collection,
+  getDocs,
+  addDoc,
+  updateDoc,
+  doc,
+} from 'firebase/firestore';
 
 const Model = (props) => {
   const onHideModalHandle = () => {
     props.onClose();
+  };
+  const componentsCollectionRef = collection(db, 'Navbar');
+  const [value, setValue] = useState('');
+  const [name, setName] = useState('');
+  const [link, setLink] = useState('');
+  const [order, setOrder] = useState(0);
+  const [isAdd, setAdd] = useState(false);
+
+  const onChangeName = (event) => {
+    setName(event.target.value);
+  };
+  const onChangeLink = (event) => {
+    setLink(event.target.value);
+  };
+  const onChangeOrder = (event) => {
+    setOrder(event.target.value);
+  };
+
+  const showAddForm = (event) => {
+    setAdd(!isAdd);
+  };
+
+  const hideAddForm = (event) => {
+    setAdd(false);
+  };
+
+  const onAddItem = async (event) => {
+    debugger;
+    let item = {
+      name: name,
+      link: link,
+      order: order,
+    };
+
+    await addDoc(componentsCollectionRef, item);
+    props.reload();
+  };
+
+  const tableColumns = [
+    {
+      order: 1,
+      name: '#',
+    },
+    {
+      order: 2,
+      name: 'Name',
+    },
+    {
+      order: 3,
+      name: 'Link',
+    },
+    {
+      order: 4,
+      name: '',
+    },
+
+    {
+      order: 5,
+      name: '',
+    },
+  ];
+
+  const tableBody = props.items[0].data;
+
+  const onCancelEdit = (event) => {
+    setEditMode(false);
   };
   return (
     <div
@@ -29,32 +104,63 @@ const Model = (props) => {
             ></button>
           </div>
           <div className="modal-body">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Link</th>
-                  <th scope="col"></th>
-                  <th scope="col"></th>
-                </tr>
-              </thead>
-              <tbody>
-                {props.items[0].data.map((item) => (
-                  <tr>
-                    <th scope="row">{item.id}</th>
-                    <td>{item.name}</td>
-                    <td>{item.link}</td>
-                    <td>
-                      <i class="bi bi-pencil-fill"></i>
-                    </td>
-                    <td>
-                      <i class="bi bi-trash-fill"></i>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <form>
+              <div className="float-right">
+                <i class="bi bi-file-plus-fill" onClick={showAddForm}></i>
+                Add Item
+              </div>
+              {isAdd && (
+                <div>
+                  <div className="form-group">
+                    <label> Name </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      value={name}
+                      onChange={onChangeName}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label> Link </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      value={link}
+                      onChange={onChangeLink}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label> Order </label>
+                    <input
+                      type="number"
+                      className="form-control"
+                      value={order}
+                      onChange={onChangeOrder}
+                    />
+                  </div>
+                  <button
+                    type="button"
+                    className="btn btn-success"
+                    onClick={onAddItem}
+                  >
+                    Add
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-default"
+                    onClick={hideAddForm}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              )}
+              <Table
+                class="table"
+                tableColumns={tableColumns}
+                tableBody={tableBody}
+                reload={props.reload}
+              ></Table>
+            </form>
           </div>
           <div className="modal-footer">
             <button

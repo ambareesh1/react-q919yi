@@ -13,24 +13,27 @@ function App() {
   const componentsCollectionRef = collection(db, 'Navbar');
 
   useEffect(() => {
-    const getComponents = async () => {
-      const data = await getDocs(componentsCollectionRef);
-      const componentdata = data.docs.map((doc) => ({
-        ...doc.data(),
-        id: doc.id,
-      }));
-      componentdata.sort((a, b) => (a.order > b.order ? 1 : -1));
-      setComponents(componentdata);
-    };
     getComponents();
   }, []);
+  const getComponents = async () => {
+    const data = await getDocs(componentsCollectionRef);
+    const componentdata = data.docs.map((doc) => ({
+      ...doc.data(),
+      id: doc.id,
+    }));
+    componentdata.sort((a, b) => (a.order > b.order ? 1 : -1));
+    setComponents(componentdata.filter((x) => x.active));
+  };
+  const reloadHeader = async () => {
+    return getComponents();
+  };
   return (
     <Routes>
       <Route
         path="/"
         element={
           <div class="wrapper clearfix" id="wrapperParallax">
-            <Header items={components} />
+            <Header items={components} reload={reloadHeader} />
             <Slider />
             <About />
           </div>

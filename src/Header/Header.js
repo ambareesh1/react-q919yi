@@ -126,7 +126,9 @@ const Header = (props) => {
           </div>
         </nav>
       </header>
-      {edit && <Modal items={dataToModal} onClose={hideModal} />}
+      {edit && (
+        <Modal items={dataToModal} onClose={hideModal} reload={props.reload} />
+      )}
     </>
   );
 };
