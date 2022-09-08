@@ -1,5 +1,5 @@
 import React from 'react';
-import CKEditor from 'react-ckeditor-component';
+import { CKEditor } from 'ckeditor4-react';
 
 class ContentEditor extends React.Component {
   constructor(props) {
@@ -41,7 +41,7 @@ class ContentEditor extends React.Component {
       <div>
         <CKEditor
           activeClass="p10"
-          content={this.state.content}
+          initData={this.state.content}
           events={{
             blur: this.onBlur,
             afterPaste: this.afterPaste,
