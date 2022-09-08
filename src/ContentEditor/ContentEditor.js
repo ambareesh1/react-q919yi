@@ -1,7 +1,7 @@
 import React from 'react';
 import CKEditor from 'react-ckeditor-component';
 
-class CkEditorComponent extends React.Component {
+class ContentEditor extends React.Component {
   constructor(props) {
     super(props);
 
@@ -36,6 +36,7 @@ class CkEditorComponent extends React.Component {
   }
 
   render() {
+    debugger;
     return (
       <div>
         <CKEditor
@@ -52,4 +53,4 @@ class CkEditorComponent extends React.Component {
   }
 }
 
-export default CkEditorComponent;
+export default ContentEditor;
