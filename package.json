@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@firebase/app": "0.x",
-    "@firebase/firestore": "^3.4.14",
+    "@firebase/firestore": "^3.4.15",
     "@popperjs/core": "^2.11.5",
     "@types/react": ">=16.14.8",
     "bootstrap": "^5.2.0",
@@ -12,6 +12,7 @@
     "firebase": "9.9.3",
     "react": "18.2.0",
     "react-bootstrap": "^2.5.0",
+    "react-ckeditor-component": "^1.1.0",
     "react-dom": "18.2.0",
     "react-router-dom": "6.3.0"
   },
