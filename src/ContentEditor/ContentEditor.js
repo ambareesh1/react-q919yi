@@ -6,7 +6,7 @@ class ContentEditor extends React.Component {
     super(props);
 
     this.state = {
-      content: 'content',
+      content: props.content,
     };
 
     this.updateContent = this.updateContent.bind(this);

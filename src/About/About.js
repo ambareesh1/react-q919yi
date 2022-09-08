@@ -1,6 +1,8 @@
 import React from 'react';
 import ContentEditor from '../ContentEditor/ContentEditor';
 const About = (props) => {
+  const whoWeAreContent =
+    'Synergy infra Consultants was established in 1995 as Electrical consultants by a team of enthusiastic and experienced engineers and grown into a complete MEP ( Mechanical, Electrical & Plumbing ) Consultancy Organization with special focus on Energy Conservation, Green Business, Automation Systems and Water conservation, Harvesting / Treatment Studies. Synergy infra is awarded with ISO 9001: 2008 for its procedural manner in maintaining the data and the standardized way of doing projects, by maintaining checklists at each and every stage of the project';
   return (
     <div className="about-custom container mt-4" id="about-1">
       <div className="services-banner-custom">
@@ -86,7 +88,7 @@ const About = (props) => {
             role="tabpanel"
             aria-labelledby="pills-home-tab"
           >
-            <ContentEditor />
+            <ContentEditor content={whoWeAreContent} />
           </div>
           <div
             class="tab-pane fade"
