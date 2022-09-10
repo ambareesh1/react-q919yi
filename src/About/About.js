@@ -17,7 +17,9 @@ const About = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    var data = CKEDITOR.instances.editor1.getData();
     console.log(inputs);
+    console.log(data);
   };
 
   return (
