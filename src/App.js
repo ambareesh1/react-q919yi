@@ -10,10 +10,13 @@ import { collection, getDocs } from 'firebase/firestore';
 
 function App() {
   const [components, setComponents] = useState([]);
+  const [about, setAbout] = useState([]);
   const componentsCollectionRef = collection(db, 'Navbar');
+  const aboutCollectionRef = collection(db, 'About');
 
   useEffect(() => {
     getComponents();
+    getAboutContent();
   }, []);
   const getComponents = async () => {
     const data = await getDocs(componentsCollectionRef);
@@ -24,8 +27,20 @@ function App() {
     componentdata.sort((a, b) => (a.order > b.order ? 1 : -1));
     setComponents(componentdata.filter((x) => x.active));
   };
+  const getAboutContent = async () => {
+    const data = await getDocs(aboutCollectionRef);
+    const aboutData = data.docs.map((doc) => ({
+      ...doc.data(),
+      id: doc.id,
+    }));
+    aboutData.sort((a, b) => (a.order > b.order ? 1 : -1));
+    setAbout(aboutData); //aboutData.filter((x) => x.active)
+  };
   const reloadHeader = async () => {
     return getComponents();
+  };
+  const reloadAbout = async () => {
+    return getAboutContent();
   };
   return (
     <Routes>
@@ -35,7 +50,7 @@ function App() {
           <div class="wrapper clearfix" id="wrapperParallax">
             <Header items={components} reload={reloadHeader} />
             <Slider />
-            <About />
+            <About items={about} reload={reloadAbout} />
           </div>
         }
       ></Route>
@@ -43,7 +58,8 @@ function App() {
         path="about"
         element={
           <div class="wrapper clearfix" id="wrapperParallax">
-            <Header items={components} /> <About />
+            <Header items={components} />
+            <About items={about} reload={reloadAbout} />
           </div>
         }
       ></Route>

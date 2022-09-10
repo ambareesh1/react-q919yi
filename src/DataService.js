@@ -1,5 +1,12 @@
 import { db } from './firebase-config';
-import { collection, getDocs } from 'firebase/firestore';
+
+import {
+  collection,
+  getDocs,
+  addDoc,
+  updateDoc,
+  doc,
+} from 'firebase/firestore';
 const DataService = () => {
   const [components, setComponents] = useState([]);
   const componentsCollectionRef = collection(db, 'Navbar');
@@ -16,6 +23,12 @@ const DataService = () => {
     };
     getComponents();
   }, []);
+
+
+  
 };
+
+
+
 
 export default DataService;

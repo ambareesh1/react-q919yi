@@ -1,120 +1,126 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ContentEditor from '../ContentEditor/ContentEditor';
+
 const About = (props) => {
-  const whoWeAreContent =
-    'Synergy infra Consultants was established in 1995 as Electrical consultants by a team of enthusiastic and experienced engineers and grown into a complete MEP ( Mechanical, Electrical & Plumbing ) Consultancy Organization with special focus on Energy Conservation, Green Business, Automation Systems and Water conservation, Harvesting / Treatment Studies. Synergy infra is awarded with ISO 9001: 2008 for its procedural manner in maintaining the data and the standardized way of doing projects, by maintaining checklists at each and every stage of the project';
+  const [edit, setEdit] = useState(false);
+  const [inputs, setInputs] = useState({});
+
+  const onEditClick = () => {
+    setEdit(!edit);
+  };
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs((values) => ({ ...values, [name]: value }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(inputs);
+  };
+
   return (
     <div className="about-custom container mt-4" id="about-1">
       <div className="services-banner-custom">
         <h4 className="heading-title services-header-custom">About Us</h4>
       </div>
+
+      <div className="float-right" onClick={onEditClick}>
+        <i class="bi bi-pencil-fill"></i>
+      </div>
+
       <div className="container">
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link active"
-              id="pills-home-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-home"
-              type="button"
-              role="tab"
-              aria-controls="pills-home"
-              aria-selected="true"
-            >
-              Who we are
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="pills-profile-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-profile"
-              type="button"
-              role="tab"
-              aria-controls="pills-profile"
-              aria-selected="false"
-            >
-              What we do
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="pills-contact-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-contact"
-              type="button"
-              role="tab"
-              aria-controls="pills-contact"
-              aria-selected="false"
-            >
-              Vision & Mission
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="core-values-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-Core-Values"
-              type="button"
-              role="tab"
-              aria-controls="pills-Core-Values"
-              aria-selected="false"
-            >
-              Core Values
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="quality-policy-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-quality-policy"
-              type="button"
-              role="tab"
-              aria-controls="pills-quality-policy"
-              aria-selected="false"
-            >
-              Quality Policy
-            </button>
-          </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-          <div
-            class="tab-pane fade show active"
-            id="pills-home"
-            role="tabpanel"
-            aria-labelledby="pills-home-tab"
-          >
-            <ContentEditor content={whoWeAreContent} />
+        <form onSubmit={handleSubmit}>
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            {props.items.map((item) =>
+              item.order == 1 ? (
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id={item.identifier}
+                    data-bs-toggle="pill"
+                    data-bs-target={'#' + item.identifier + 'content'}
+                    type="button"
+                    role="tab"
+                    aria-controls={'#' + item.identifier + 'content'}
+                    aria-selected="true"
+                  >
+                    {edit ? (
+                      <input
+                        type="text"
+                        name={item.identifier}
+                        className="form-control"
+                        defaultValue={item.name}
+                        onChange={handleChange}
+                      />
+                    ) : (
+                      item.name
+                    )}
+                  </button>
+                </li>
+              ) : (
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id={item.identifier}
+                    data-bs-toggle="pill"
+                    data-bs-target={'#' + item.identifier + 'content'}
+                    type="button"
+                    role="tab"
+                    aria-controls={'#' + item.identifier + 'content'}
+                    aria-selected="true"
+                  >
+                    {edit ? (
+                      <input
+                        type="text"
+                        name={item.identifier}
+                        className="form-control"
+                        defaultValue={item.name}
+                        onChange={handleChange}
+                      />
+                    ) : (
+                      item.name
+                    )}
+                  </button>
+                </li>
+              )
+            )}
+          </ul>
+
+          <div class="tab-content">
+            {props.items.map((item) =>
+              item.order == 1 ? (
+                <div
+                  className="tab-pane fade show active"
+                  id={item.identifier + 'content'}
+                  role="tabpanel"
+                  aria-labelledby="pills-home-tab"
+                >
+                  {edit ? (
+                    <ContentEditor content={item.description} />
+                  ) : (
+                    item.description
+                  )}
+                </div>
+              ) : (
+                <div
+                  className="tab-pane "
+                  id={item.identifier + 'content'}
+                  role="tabpanel"
+                  aria-labelledby="pills-home-tab"
+                >
+                  <ContentEditor content={item.description} />
+                </div>
+              )
+            )}
           </div>
-          <div
-            class="tab-pane fade"
-            id="pills-profile"
-            role="tabpanel"
-            aria-labelledby="pills-profile-tab"
-          >
-            <ContentEditor />
+          <div className="mt-3">
+            <button type="submit" className="btn btn-success">
+              Update
+            </button>
           </div>
-          <div
-            class="tab-pane fade"
-            id="pills-contact"
-            role="tabpanel"
-            aria-labelledby="pills-contact-tab"
-          >
-            Synergy infra Consultants was established in 1995 as Electrical
-            consultants by a team of enthusiastic and experienced engineers and
-            grown into a complete MEP ( Mechanical, Electrical & Plumbing )
-            Consultancy Organization with special focus on Energy Conservation,
-            Green Business, Automation Systems and Water conservation,
-            Harvesting / Treatment Studies. Synergy infra is awarded with ISO
-            9001: 2008 for its procedural manner in maintaining the data and the
-            standardized way of doing projects, by maintaining checklists at
-            each and every stage of the project
-          </div>
-        </div>
+        </form>
       </div>
     </div>
   );
