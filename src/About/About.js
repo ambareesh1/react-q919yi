@@ -27,12 +27,10 @@ const About = (props) => {
   };
 
   const handleSubmit = async (event) => {
-    debugger;
     event.preventDefault();
     if (inputs) {
       const batch = writeBatch(db);
       Object.entries(inputs).map(([key, value]) => {
-        debugger;
         const about = doc(db, 'About', key);
         const newFields = { name: value };
         batch.update(about, newFields);
@@ -40,7 +38,16 @@ const About = (props) => {
       // Commit the batch
       await batch.commit();
     }
-    if (descriptions.length > 0) {
+    if (descriptions) {
+      debugger;
+      const batch = writeBatch(db);
+      Object.entries(descriptions).map(([key, value]) => {
+        const about = doc(db, 'About', key);
+        const newFields = { name: value };
+        batch.update(about, newFields);
+      });
+      // Commit the batch
+      await batch.commit();
     }
   };
 
@@ -131,9 +138,7 @@ const About = (props) => {
                       activeClass="p10"
                       name={item.identifier}
                       initData={item.description}
-                      onChange={(event) =>
-                        onChangeDescription(event, item.identifier)
-                      }
+                      onChange={(event) => onChangeDescription(event, item.id)}
                     />
                   ) : (
                     item.description
@@ -151,9 +156,7 @@ const About = (props) => {
                       activeClass="p10"
                       name={item.identifier}
                       initData={item.description}
-                      onChange={(event) =>
-                        onChangeDescription(event, item.identifier)
-                      }
+                      onChange={(event) => onChangeDescription(event, item.id)}
                     />
                   ) : (
                     item.description
