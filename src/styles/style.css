@@ -853,8 +853,8 @@ blockquote .author {
   text-transform: capitalize;
   padding: 0 30px;
   border: 0;
-  width: 170px;
-  height: 65px;
+  width: 150px;
+  height: 40px;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;

@@ -43,12 +43,14 @@ const About = (props) => {
       const batch = writeBatch(db);
       Object.entries(descriptions).map(([key, value]) => {
         const about = doc(db, 'About', key);
-        const newFields = { name: value };
+        const newFields = { description: value };
         batch.update(about, newFields);
       });
       // Commit the batch
       await batch.commit();
     }
+    onEditClick();
+    props.reload();
   };
 
   const onChangeDescription = (event, name) => {
@@ -57,13 +59,12 @@ const About = (props) => {
   };
 
   return (
-    <div className="about-custom container mt-4" id="about-1">
-      <div className="services-banner-custom">
-        <h4 className="heading-title services-header-custom">About Us</h4>
-      </div>
-
-      <div className="float-right" onClick={onEditClick}>
-        <i class="bi bi-pencil-fill"></i>
+    <div className="about-custom container mt-5" id="about-1">
+      <div className="services-banner-custom d-flex">
+        <h4 className="heading-title services-header-custom">About Us</h4>{' '}
+        <span className="ps-3" onClick={onEditClick}>
+          <i class="bi bi-pencil-fill"></i>
+        </span>
       </div>
 
       <div className="container">
@@ -141,7 +142,11 @@ const About = (props) => {
                       onChange={(event) => onChangeDescription(event, item.id)}
                     />
                   ) : (
-                    item.description
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: item.description,
+                      }}
+                    ></div>
                   )}
                 </div>
               ) : (

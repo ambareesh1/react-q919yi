@@ -4,6 +4,7 @@ import './styles/custom.css';
 import Header from './Header/Header';
 import Slider from './Slider/Slider';
 import About from './About/About';
+import Services from './Services/Services';
 import { Routes, Route } from 'react-router-dom';
 import { db } from './firebase-config';
 import { collection, getDocs } from 'firebase/firestore';
@@ -60,6 +61,15 @@ function App() {
           <div class="wrapper clearfix" id="wrapperParallax">
             <Header items={components} />
             <About items={about} reload={reloadAbout} />
+          </div>
+        }
+      ></Route>
+      <Route
+        path="services"
+        element={
+          <div class="wrapper clearfix" id="wrapperParallax">
+            <Header items={components} />
+            <Services items={about} reload={reloadAbout} />
           </div>
         }
       ></Route>
