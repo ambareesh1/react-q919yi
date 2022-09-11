@@ -33,8 +33,6 @@ const About = (props) => {
       const batch = writeBatch(db);
       Object.entries(inputs).map(([key, value]) => {
         debugger;
-        console.log(key);
-        console.log(value);
         const about = doc(db, 'About', key);
         const newFields = { name: value };
         batch.update(about, newFields);
@@ -80,7 +78,7 @@ const About = (props) => {
                     {edit ? (
                       <input
                         type="text"
-                        name={item.identifier}
+                        name={item.id}
                         className="form-control"
                         defaultValue={item.name}
                         onChange={handleChange}
@@ -105,7 +103,7 @@ const About = (props) => {
                     {edit ? (
                       <input
                         type="text"
-                        name={item.identifier}
+                        name={item.id}
                         className="form-control"
                         defaultValue={item.name}
                         onChange={handleChange}
