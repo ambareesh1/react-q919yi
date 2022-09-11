@@ -1,9 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import ContentEditor from '../ContentEditor/ContentEditor';
+import React, { useState, form, useEffect } from 'react';
+import { CKEditor } from 'ckeditor4-react';
+import { db } from '../firebase-config';
+import { writeBatch, doc } from 'firebase/firestore';
+import ClassicEditor from '@ckeditor/ckeditor4-build-classic';
+import {
+  collection,
+  getDocs,
+  addDoc,
+  updateDoc,
+  doc,
+} from 'firebase/firestore';
 
 const About = (props) => {
   const [edit, setEdit] = useState(false);
   const [inputs, setInputs] = useState({});
+  const [descriptions, setDescription] = useState({});
 
   const onEditClick = () => {
     setEdit(!edit);
@@ -15,11 +26,29 @@ const About = (props) => {
     setInputs((values) => ({ ...values, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
+    debugger;
     event.preventDefault();
-    var data = CKEDITOR.instances.editor1.getData();
-    console.log(inputs);
-    console.log(data);
+    if (inputs) {
+      const batch = writeBatch(db);
+      Object.entries(inputs).map(([key, value]) => {
+        debugger;
+        console.log(key);
+        console.log(value);
+        const about = doc(db, 'About', key);
+        const newFields = { name: value };
+        batch.update(about, newFields);
+      });
+      // Commit the batch
+      await batch.commit();
+    }
+    if (descriptions.length > 0) {
+    }
+  };
+
+  const onChangeDescription = (event, name) => {
+    const value = event.editor.getData();
+    setDescription((values) => ({ ...values, [name]: value }));
   };
 
   return (
@@ -100,7 +129,14 @@ const About = (props) => {
                   aria-labelledby="pills-home-tab"
                 >
                   {edit ? (
-                    <ContentEditor content={item.description} />
+                    <CKEditor
+                      activeClass="p10"
+                      name={item.identifier}
+                      initData={item.description}
+                      onChange={(event) =>
+                        onChangeDescription(event, item.identifier)
+                      }
+                    />
                   ) : (
                     item.description
                   )}
@@ -112,16 +148,29 @@ const About = (props) => {
                   role="tabpanel"
                   aria-labelledby="pills-home-tab"
                 >
-                  <ContentEditor content={item.description} />
+                  {edit ? (
+                    <CKEditor
+                      activeClass="p10"
+                      name={item.identifier}
+                      initData={item.description}
+                      onChange={(event) =>
+                        onChangeDescription(event, item.identifier)
+                      }
+                    />
+                  ) : (
+                    item.description
+                  )}
                 </div>
               )
             )}
           </div>
-          <div className="mt-3">
-            <button type="submit" className="btn btn-success">
-              Update
-            </button>
-          </div>
+          {edit && (
+            <div className="mt-3">
+              <button type="submit" className="btn btn-success">
+                Update
+              </button>
+            </div>
+          )}
         </form>
       </div>
     </div>
