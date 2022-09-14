@@ -1,4 +1,13 @@
 .service-description {
-  color: #fff;
-  width: 55%;
+  color: #ffffffd1;
+  font-size: 18px;
+  background: #70809061;
+  padding: 10px;
+}
+
+.services-container-custom {
+  position: absolute;
+  top: 75%;
+  left: 5%;
+  background: #fff;
 }

@@ -4,6 +4,7 @@ import { db } from '../firebase-config';
 import { writeBatch, doc } from 'firebase/firestore';
 import ClassicEditor from '@ckeditor/ckeditor4-build-classic';
 import './Services.css';
+
 import {
   collection,
   getDocs,
@@ -11,6 +12,7 @@ import {
   updateDoc,
   doc,
 } from 'firebase/firestore';
+import { DataService } from '../DataService';
 const Services = (props) => {
   const [edit, setEdit] = useState(false);
   const [inputs, setInputs] = useState({});
@@ -85,15 +87,16 @@ const Services = (props) => {
             onChange={(event) => onChangeDescription(event, serviceText[0].id)}
           />
         ) : (
-          <div
+          <p
+            className="service-description"
             dangerouslySetInnerHTML={{
               __html: serviceText[0].description,
             }}
-          ></div>
+          ></p>
         )}
       </div>
 
-      <div className="container">
+      <div className="container services-container-custom">
         <form onSubmit={handleSubmit}>
           <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
             {props.items.map((item) =>
