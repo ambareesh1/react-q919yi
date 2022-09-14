@@ -3,7 +3,7 @@ import { CKEditor } from 'ckeditor4-react';
 import { db } from '../firebase-config';
 import { writeBatch, doc } from 'firebase/firestore';
 import ClassicEditor from '@ckeditor/ckeditor4-build-classic';
-
+import './Services.css';
 import {
   collection,
   getDocs,
@@ -15,11 +15,13 @@ const Services = (props) => {
   const [edit, setEdit] = useState(false);
   const [inputs, setInputs] = useState({});
   const [descriptions, setDescription] = useState({});
+  const [serviceDescription, setServiceDescription] = useState({});
 
   const onEditClick = () => {
     setEdit(!edit);
   };
-
+  debugger;
+  const serviceText = props.items.filter((x) => x.id == 'X4H1paCJRHQvq81CNwYc');
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -31,7 +33,7 @@ const Services = (props) => {
     if (inputs) {
       const batch = writeBatch(db);
       Object.entries(inputs).map(([key, value]) => {
-        const about = doc(db, 'About', key);
+        const about = doc(db, 'Service', key);
         const newFields = { name: value };
         batch.update(about, newFields);
       });
@@ -42,7 +44,7 @@ const Services = (props) => {
       debugger;
       const batch = writeBatch(db);
       Object.entries(descriptions).map(([key, value]) => {
-        const about = doc(db, 'About', key);
+        const about = doc(db, 'Service', key);
         const newFields = { description: value };
         batch.update(about, newFields);
       });
@@ -75,17 +77,20 @@ const Services = (props) => {
             <i className="bi bi-pencil-fill"></i>
           </span>
         </div>
-
-        <p className="service-description">
-          Shri sathi projects as a Electrical consultants by a team of
-          enthusiastic and experienced engineers and grown into a complete MEP (
-          Mechanical, Electrical & Plumbing ) Consultancy Organization with
-          special focus on Energy Conservation, Green Business, Automation
-          Systems and Water conservation, Harvesting / Treatment Studies.
-          Synergy infra is awarded with ISO 9001: 2008 for its procedural manner
-          in maintaining the data and the standardized way of doing projects, by
-          maintaining checklists at each and every stage of the project
-        </p>
+        {edit ? (
+          <CKEditor
+            activeClass="p10"
+            name={serviceText[0].identifier}
+            initData={serviceText[0].description}
+            onChange={(event) => onChangeDescription(event, serviceText[0].id)}
+          />
+        ) : (
+          <div
+            dangerouslySetInnerHTML={{
+              __html: serviceText[0].description,
+            }}
+          ></div>
+        )}
       </div>
 
       <div className="container">
@@ -185,7 +190,11 @@ const Services = (props) => {
                       onChange={(event) => onChangeDescription(event, item.id)}
                     />
                   ) : (
-                    item.description
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: item.description,
+                      }}
+                    ></div>
                   )}
                 </div>
               )
