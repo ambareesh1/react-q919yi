@@ -22,8 +22,9 @@ const Services = (props) => {
   const onEditClick = () => {
     setEdit(!edit);
   };
-  debugger;
+
   const serviceText = props.items.filter((x) => x.id == 'X4H1paCJRHQvq81CNwYc');
+
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -43,7 +44,6 @@ const Services = (props) => {
       await batch.commit();
     }
     if (descriptions) {
-      debugger;
       const batch = writeBatch(db);
       Object.entries(descriptions).map(([key, value]) => {
         const about = doc(db, 'Service', key);
@@ -67,7 +67,7 @@ const Services = (props) => {
       <div className="row">
         <img
           className="w-100"
-          src="https://i.ibb.co/NsQ3rBH/p11.jpg"
+          src={serviceText[0].backgroundImage}
           alt="Solor Project"
         />
       </div>
@@ -97,120 +97,130 @@ const Services = (props) => {
       </div>
 
       <div className="container services-container-custom">
-        <form onSubmit={handleSubmit}>
-          <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            {props.items.map((item) =>
-              item.order == 1 ? (
-                <li className="nav-item" role="presentation">
-                  <button
-                    className="nav-link active"
-                    id={item.identifier}
-                    data-bs-toggle="pill"
-                    data-bs-target={'#' + item.identifier + 'content'}
-                    type="button"
-                    role="tab"
-                    aria-controls={'#' + item.identifier + 'content'}
-                    aria-selected="true"
-                  >
-                    {edit ? (
-                      <input
-                        type="text"
-                        name={item.id}
-                        className="form-control"
-                        defaultValue={item.name}
-                        onChange={handleChange}
-                      />
-                    ) : (
-                      item.name
-                    )}
-                  </button>
-                </li>
-              ) : (
-                <li className="nav-item" role="presentation">
-                  <button
-                    className="nav-link"
-                    id={item.identifier}
-                    data-bs-toggle="pill"
-                    data-bs-target={'#' + item.identifier + 'content'}
-                    type="button"
-                    role="tab"
-                    aria-controls={'#' + item.identifier + 'content'}
-                    aria-selected="true"
-                  >
-                    {edit ? (
-                      <input
-                        type="text"
-                        name={item.id}
-                        className="form-control"
-                        defaultValue={item.name}
-                        onChange={handleChange}
-                      />
-                    ) : (
-                      item.name
-                    )}
-                  </button>
-                </li>
-              )
-            )}
-          </ul>
+        <div className="m-2">
+          <form onSubmit={handleSubmit}>
+            <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              {props.items
+                .filter((x) => x.Order > 0)
+                .map((item) =>
+                  item.order == 1 ? (
+                    <li className="nav-item" role="presentation">
+                      <button
+                        className="nav-link active"
+                        id={item.identifier}
+                        data-bs-toggle="pill"
+                        data-bs-target={'#' + item.identifier + 'content'}
+                        type="button"
+                        role="tab"
+                        aria-controls={'#' + item.identifier + 'content'}
+                        aria-selected="true"
+                      >
+                        {edit ? (
+                          <input
+                            type="text"
+                            name={item.id}
+                            className="form-control"
+                            defaultValue={item.name}
+                            onChange={handleChange}
+                          />
+                        ) : (
+                          item.name
+                        )}
+                      </button>
+                    </li>
+                  ) : (
+                    <li className="nav-item" role="presentation">
+                      <button
+                        className="nav-link"
+                        id={item.identifier}
+                        data-bs-toggle="pill"
+                        data-bs-target={'#' + item.identifier + 'content'}
+                        type="button"
+                        role="tab"
+                        aria-controls={'#' + item.identifier + 'content'}
+                        aria-selected="true"
+                      >
+                        {edit ? (
+                          <input
+                            type="text"
+                            name={item.id}
+                            className="form-control"
+                            defaultValue={item.name}
+                            onChange={handleChange}
+                          />
+                        ) : (
+                          item.name
+                        )}
+                      </button>
+                    </li>
+                  )
+                )}
+            </ul>
 
-          <div className="tab-content">
-            {props.items.map((item) =>
-              item.order == 1 ? (
-                <div
-                  className="tab-pane fade show active"
-                  id={item.identifier + 'content'}
-                  role="tabpanel"
-                  aria-labelledby="pills-home-tab"
-                >
-                  {edit ? (
-                    <CKEditor
-                      activeClass="p10"
-                      name={item.identifier}
-                      initData={item.description}
-                      onChange={(event) => onChangeDescription(event, item.id)}
-                    />
+            <div className="tab-content">
+              {props.items
+                .filter((x) => x.Order >= 1)
+                .map((item) =>
+                  item.order == 1 ? (
+                    <div
+                      className="tab-pane fade show active"
+                      id={item.identifier + 'content'}
+                      role="tabpanel"
+                      aria-labelledby="pills-home-tab"
+                    >
+                      {edit ? (
+                        <CKEditor
+                          activeClass="p10"
+                          name={item.identifier}
+                          initData={item.description}
+                          onChange={(event) =>
+                            onChangeDescription(event, item.id)
+                          }
+                        />
+                      ) : (
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: item.description,
+                          }}
+                        ></div>
+                      )}
+                    </div>
                   ) : (
                     <div
-                      dangerouslySetInnerHTML={{
-                        __html: item.description,
-                      }}
-                    ></div>
-                  )}
-                </div>
-              ) : (
-                <div
-                  className="tab-pane "
-                  id={item.identifier + 'content'}
-                  role="tabpanel"
-                  aria-labelledby="pills-home-tab"
-                >
-                  {edit ? (
-                    <CKEditor
-                      activeClass="p10"
-                      name={item.identifier}
-                      initData={item.description}
-                      onChange={(event) => onChangeDescription(event, item.id)}
-                    />
-                  ) : (
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: item.description,
-                      }}
-                    ></div>
-                  )}
-                </div>
-              )
-            )}
-          </div>
-          {edit && (
-            <div className="mt-3">
-              <button type="submit" className="btn btn-success">
-                Update
-              </button>
+                      className="tab-pane "
+                      id={item.identifier + 'content'}
+                      role="tabpanel"
+                      aria-labelledby="pills-home-tab"
+                    >
+                      {edit ? (
+                        <CKEditor
+                          activeClass="p10"
+                          name={item.identifier}
+                          initData={item.description}
+                          onChange={(event) =>
+                            onChangeDescription(event, item.id)
+                          }
+                        />
+                      ) : (
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: item.description,
+                          }}
+                        ></div>
+                      )}
+                    </div>
+                  )
+                )}
             </div>
-          )}
-        </form>
+            {edit && (
+              <div className="mt-3">
+                <button type="submit" className="btn btn-success">
+                  Update
+                </button>
+              </div>
+            )}
+          </form>
+        </div>
       </div>
     </div>
   );
