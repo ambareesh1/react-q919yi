@@ -9,7 +9,7 @@ import {
   doc,
 } from 'firebase/firestore';
 
-const Model = (props) => {
+const Modal = (props) => {
   const onHideModalHandle = () => {
     props.onClose();
   };
@@ -184,4 +184,4 @@ const Model = (props) => {
   );
 };
 
-export default Model;
+export default Modal;

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './styles/style.css';
 import './styles/custom.css';
 import Header from './Header/Header';
+import Footer from './Footer/Footer';
 import Slider from './Slider/Slider';
 import About from './About/About';
 import Services from './Services/Services';
@@ -13,6 +14,7 @@ function App() {
   const [components, setComponents] = useState([]);
   const [about, setAbout] = useState([]);
   const [service, setService] = useState([]);
+  const [serviceDescription, setServiceDescription] = useState([]);
 
   const componentsCollectionRef = collection(db, 'Navbar');
   const aboutCollectionRef = collection(db, 'About');
@@ -43,14 +45,15 @@ function App() {
   };
 
   const getServiceContent = async () => {
-    console.log('hii');
     const data = await getDocs(serviceCollectionRef);
     const serviceData = data.docs.map((doc) => ({
       ...doc.data(),
       id: doc.id,
     }));
     // serviceData.sort((a, b) => (a.order > b.order ? 1 : -1));
-    setService(serviceData); //aboutData.filter((x) => x.active)
+    let serviceDes = serviceData.filter((x) => x.category == 'description');
+    setService(serviceData.filter((x) => x.category == 'tabs')); //aboutData.filter((x) => x.active)
+    setServiceDescription(serviceDes);
   };
 
   const reloadHeader = async () => {
@@ -70,6 +73,7 @@ function App() {
           <div class="wrapper clearfix" id="wrapperParallax">
             <Header items={components} reload={reloadHeader} />
             <Slider />
+            <Footer />
           </div>
         }
       ></Route>
@@ -77,8 +81,9 @@ function App() {
         path="about"
         element={
           <div class="wrapper clearfix" id="wrapperParallax">
-            <Header items={components} />
-            <About items={about} reload={reloadAbout} />
+            <Header items={components} reload={reloadHeader} />
+            <About items={about} reload={reloadAbout} reload={reloadHeader} />
+            <Footer />
           </div>
         }
       ></Route>
@@ -86,8 +91,13 @@ function App() {
         path="services"
         element={
           <div class="wrapper clearfix" id="wrapperParallax">
-            <Header items={components} />
-            <Services items={service} reload={reloadService} />
+            <Header items={components} reload={reloadHeader} />
+            <Services
+              items={service}
+              reload={reloadService}
+              serviceDes={serviceDescription}
+            />
+            <Footer />
           </div>
         }
       ></Route>
