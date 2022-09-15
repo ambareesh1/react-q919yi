@@ -7,7 +7,7 @@ import {
   updateDoc,
   doc,
 } from 'firebase/firestore';
-const Table = (props) => {
+const Table = (props) => { 
   const [isEditMode, setEditMode] = useState(false);
   const [navName, setNavName] = useState('');
   const [tableBody, setTableBody] = useState([]);
