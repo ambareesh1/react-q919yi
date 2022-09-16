@@ -62,15 +62,16 @@ function App() {
   };
 
   const getProjectsContent = async () => {
+    debugger;
     const data = await getDocs(projectsCollectionRef);
     const projectsData = data.docs.map((doc) => ({
       ...doc.data(),
       id: doc.id,
     }));
 
-    let serviceDes = projectsData.filter((x) => x.category == 'description');
-    setProjects(serviceData.filter((x) => x.category == 'tabs')); //aboutData.filter((x) => x.active)
-    setProjectsDescription(serviceDes);
+    let projDesc = projectsData.filter((x) => x.category == 'description');
+    // setProjects(serviceData.filter((x) => x.category == 'tabs')); //aboutData.filter((x) => x.active)
+    setProjectsDescription(projDesc);
   };
 
   const reloadHeader = async () => {
@@ -132,7 +133,7 @@ function App() {
             <Projects
               items={projects}
               reload={reloadProjects}
-              serviceDes={projectsDescription}
+              proDesc={projectsDescription}
             />
             <Footer />
           </div>
