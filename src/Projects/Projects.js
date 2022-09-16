@@ -3,7 +3,7 @@ import { CKEditor } from 'ckeditor4-react';
 import { db } from '../firebase-config';
 import { writeBatch, doc } from 'firebase/firestore';
 import ClassicEditor from '@ckeditor/ckeditor4-build-classic';
-import './Services.css';
+
 
 import {
   collection,
@@ -13,7 +13,7 @@ import {
   doc,
 } from 'firebase/firestore';
 import { DataService } from '../DataService';
-const Services = (props) => {
+const Projects = (props) => {
   const [edit, setEdit] = useState(false);
   const [inputs, setInputs] = useState({});
   const [descriptions, setDescription] = useState({});
@@ -23,7 +23,7 @@ const Services = (props) => {
   const [desc, setDes] = useState({});
   const [add, setAdd] = useState(false);
 
-  const serviceCollectionRef = collection(db, 'Service');
+  const serviceCollectionRef = collection(db, 'Projects');
   const onEditClick = () => {
     setEdit(!edit);
   };
@@ -326,4 +326,4 @@ const Services = (props) => {
   );
 };
 
-export default Services;
+export default Projects;

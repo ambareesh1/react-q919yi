@@ -6,6 +6,7 @@ import Footer from './Footer/Footer';
 import Slider from './Slider/Slider';
 import About from './About/About';
 import Services from './Services/Services';
+import Projects from './Projects/Projects';
 import { Routes, Route } from 'react-router-dom';
 import { db } from './firebase-config';
 import { collection, getDocs } from 'firebase/firestore';
@@ -15,15 +16,19 @@ function App() {
   const [about, setAbout] = useState([]);
   const [service, setService] = useState([]);
   const [serviceDescription, setServiceDescription] = useState([]);
+  const [projects, setProjects] = useState([]);
+  const [projectsDescription, setProjectsDescription] = useState([]);
 
   const componentsCollectionRef = collection(db, 'Navbar');
   const aboutCollectionRef = collection(db, 'About');
   const serviceCollectionRef = collection(db, 'Service');
+  const projectsCollectionRef = collection(db, 'Projects');
 
   useEffect(() => {
     getComponents();
     getAboutContent();
     getServiceContent();
+    getProjectsContent();
   }, []);
   const getComponents = async () => {
     const data = await getDocs(componentsCollectionRef);
@@ -56,6 +61,18 @@ function App() {
     setServiceDescription(serviceDes);
   };
 
+  const getProjectsContent = async () => {
+    const data = await getDocs(projectsCollectionRef);
+    const projectsData = data.docs.map((doc) => ({
+      ...doc.data(),
+      id: doc.id,
+    }));
+
+    let serviceDes = projectsData.filter((x) => x.category == 'description');
+    setProjects(serviceData.filter((x) => x.category == 'tabs')); //aboutData.filter((x) => x.active)
+    setProjectsDescription(serviceDes);
+  };
+
   const reloadHeader = async () => {
     return getComponents();
   };
@@ -64,6 +81,9 @@ function App() {
   };
   const reloadService = async () => {
     return getServiceContent();
+  };
+  const reloadProjects = async () => {
+    return getProjectsContent();
   };
   return (
     <Routes>
@@ -79,6 +99,7 @@ function App() {
       ></Route>
       <Route
         path="about"
+        replace
         element={
           <div class="wrapper clearfix" id="wrapperParallax">
             <Header items={components} reload={reloadHeader} />
@@ -89,6 +110,7 @@ function App() {
       ></Route>
       <Route
         path="services"
+        replace
         element={
           <div class="wrapper clearfix" id="wrapperParallax">
             <Header items={components} reload={reloadHeader} />
@@ -96,6 +118,21 @@ function App() {
               items={service}
               reload={reloadService}
               serviceDes={serviceDescription}
+            />
+            <Footer />
+          </div>
+        }
+      ></Route>
+      <Route
+        path="projects"
+        replace
+        element={
+          <div class="wrapper clearfix" id="wrapperParallax">
+            <Header items={components} reload={reloadHeader} />
+            <Projects
+              items={projects}
+              reload={reloadProjects}
+              serviceDes={projectsDescription}
             />
             <Footer />
           </div>
