@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import './Admin.css';
 import { NavLink } from 'react-router-dom';
 
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Admin = (props) => {
+  const history = useNavigate();
   const [email, setEmail] = useState('');
   const [pwd, setPwd] = useState('');
 
@@ -19,6 +20,7 @@ const Admin = (props) => {
   const onSubmit = () => {
     if (email == 'admin@admin.com' && pwd == 'admin@123') {
       localStorage.setItem('isAdmin', true);
+      history('/');
     } else {
       localStorage.setItem('isAdmin', false);
     }
