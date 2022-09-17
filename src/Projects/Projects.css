@@ -22,3 +22,8 @@
 .commercial-bg {
   background: #1a2a36;
 }
+
+.commercial-img {
+  width: 400px;
+  height: 300px;
+}

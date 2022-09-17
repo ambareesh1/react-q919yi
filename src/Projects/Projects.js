@@ -141,6 +141,18 @@ const Projects = (props) => {
       </div>
       <div className="row project-background">
         <div className="col-lg-6">
+          <div className="m-5">
+            <h1> Infrastructure Development </h1>
+            <p className="text-color">
+              From major and complex infra projects such as building roads,
+              bridges, airport terminals, metro rail stations, solar power
+              bases, irrigation projects to bus terminals, multi-level parking
+              complexes, sports complexes and many more industrial projects, It
+              executed on end-to-end development on many challenging projects.
+            </p>
+          </div>
+        </div>
+        <div className="col-lg-6">
           <div className="card-columns m-5">
             <div className="card shadow  bg-body rounded">
               <div>
@@ -198,18 +210,6 @@ const Projects = (props) => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6">
-          <div className="m-5">
-            <h1> Infrastructure Development </h1>
-            <p className="text-color">
-              From major and complex infra projects such as building roads,
-              bridges, airport terminals, metro rail stations, solar power
-              bases, irrigation projects to bus terminals, multi-level parking
-              complexes, sports complexes and many more industrial projects, It
-              executed on end-to-end development on many challenging projects.
-            </p>
-          </div>
-        </div>
       </div>
       <div className="row commercial-bg">
         <div className="col-lg-6">
@@ -228,9 +228,81 @@ const Projects = (props) => {
           <div className="m-5">
             <img
               alt="commercial projects"
-              className="mx-auto d-block custom-box-shadow rounded"
+              className="mx-auto d-block custom-box-shadow rounded commercial-img "
               src="https://i.ibb.co/hLJFhth/p7.jpg"
             />
+          </div>
+        </div>
+      </div>
+      <div className="row project-background">
+        <div className="col-lg-6">
+          <div className="m-5">
+            <h1> Infrastructure Development </h1>
+            <p className="text-color">
+              From major and complex infra projects such as building roads,
+              bridges, airport terminals, metro rail stations, solar power
+              bases, irrigation projects to bus terminals, multi-level parking
+              complexes, sports complexes and many more industrial projects, It
+              executed on end-to-end development on many challenging projects.
+            </p>
+          </div>
+        </div>
+        <div className="col-lg-6">
+          <div className="card-columns m-5">
+            <div className="card shadow  bg-body rounded">
+              <div>
+                <img
+                  className="project-card-image-style"
+                  src="https://i.ibb.co/Q9P6RBq/p8.jpg"
+                  alt="solor"
+                />
+              </div>
+            </div>
+            <div className="card">
+              <div>
+                <img
+                  className="project-card-image-style"
+                  src="https://i.ibb.co/tpgWdrZ/1.jpg"
+                  alt="solor"
+                />
+              </div>
+            </div>
+            <div className="card">
+              <div>
+                <img
+                  className="project-card-image-style"
+                  src="https://i.ibb.co/hLJFhth/p7.jpg"
+                  alt="solor"
+                />
+              </div>
+            </div>
+            <div className="card">
+              <div>
+                <img
+                  className="project-card-image-style"
+                  src="https://i.ibb.co/NCWDYqZ/p2.jpg"
+                  alt="solor"
+                />
+              </div>
+            </div>
+            <div className="card">
+              <div>
+                <img
+                  className="project-card-image-style"
+                  src="https://i.ibb.co/Rgh3TVK/p3.jpg"
+                  alt="solor"
+                />
+              </div>
+            </div>
+            <div className="card">
+              <div>
+                <img
+                  className="project-card-image-style"
+                  src="https://i.ibb.co/z5b7ZbW/p11.jpg"
+                  alt="solor"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
