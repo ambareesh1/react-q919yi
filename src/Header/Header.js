@@ -55,6 +55,20 @@ const Header = (props) => {
               </div>
             </div>
           </div>
+          <div className="block-right">
+            <div className="top-contact">
+              <div className="contact-infos">
+                <i className="fa-solid fa-phone"></i>
+                <div className="contact-body">
+                  <p>
+                    <NavLink to="/admin">
+                      <i class="bi bi-power"></i>
+                    </NavLink>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <nav
           className="navbar navbar-expand-lg navbar-sticky"

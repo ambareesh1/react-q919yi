@@ -8,7 +8,7 @@ import About from './About/About';
 import Services from './Services/Services';
 import Projects from './Projects/Projects';
 import Admin from './Admin/Admin';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Switch } from 'react-router-dom';
 import { db } from './firebase-config';
 import { collection, getDocs } from 'firebase/firestore';
 

@@ -14,6 +14,7 @@ import {
 } from 'firebase/firestore';
 import { DataService } from '../DataService';
 const Services = (props) => {
+  const isAdmin = localStorage.getItem('isAdmin');
   const [edit, setEdit] = useState(false);
   const [inputs, setInputs] = useState({});
   const [descriptions, setDescription] = useState({});
@@ -113,9 +114,11 @@ const Services = (props) => {
       <div className="top-left">
         <div className="services-banner-custom d-flex">
           <h4 className="custom-project-header">Our Services</h4>
-          <span className="ps-3" onClick={onEditClick}>
-            <i className="bi bi-pencil-fill"></i>
-          </span>
+          {isAdmin == 'true' && (
+            <span className="ps-3" onClick={onEditClick}>
+              <i className="bi bi-pencil-fill"></i>
+            </span>
+          )}
         </div>
         <div className="d-none d-sm-block">
           {edit ? (
