@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Modal from '../Modal/Modal';
+import './Header.css';
 const Header = (props) => {
   const navBarData = props.items;
   const dataToModal = [
@@ -100,17 +101,19 @@ const Header = (props) => {
               <i class="bi bi-pencil-fill"></i>
             </div>
             <div className="module-holder">
-              <div className="block-right">
-                <img
-                  src="./assets/images/about/makeinindia.png"
-                  className="custom-img-heght"
-                />
-              </div>
-              <div className="block-right">
-                <img
-                  src="./assets/images/about/msme.png"
-                  className="custom-img-heght"
-                />
+              <div className="d-none d-sm-block">
+                <div className="block-right">
+                  <img
+                    src="https://i.ibb.co/XSCGJNK/makeinindia.png"
+                    className="custom-img-heght"
+                  />
+                </div>
+                <div className="block-right">
+                  <img
+                    src="https://i.ibb.co/jb1B5Zb/msme.png"
+                    className="custom-img-heght"
+                  />
+                </div>
               </div>
               <div className="module-contact">
                 <a

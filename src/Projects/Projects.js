@@ -3,7 +3,7 @@ import { CKEditor } from 'ckeditor4-react';
 import { db } from '../firebase-config';
 import { writeBatch, doc } from 'firebase/firestore';
 import ClassicEditor from '@ckeditor/ckeditor4-build-classic';
-
+import './Projects.css';
 import {
   collection,
   getDocs,
@@ -101,40 +101,137 @@ const Projects = (props) => {
     setEdit(false);
   };
   return (
-    <div className="about-custom" id="about-1">
-      <div className="row">
-        <img
-          className="w-100"
-          src={props.proDesc[0].backgroundImage}
-          alt="Solor Project"
-        />
-      </div>
-
-      <div className="top-left">
-        <div className="services-banner-custom d-flex">
-          <h4 className="custom-project-header">Our Projects</h4>
-          <span className="ps-3" onClick={onEditClick}>
-            <i className="bi bi-pencil-fill"></i>
-          </span>
+    <div>
+      <div className="about-custom" id="about-1">
+        <div className="row">
+          <img
+            className="w-100"
+            src={props.proDesc[0].backgroundImage}
+            alt="Solor Project"
+          />
         </div>
-        <div className="d-none d-sm-block">
-          {edit ? (
-            <CKEditor
-              activeClass="p10"
-              name={props.proDesc[0].name}
-              initData={props.proDesc[0].description}
-              onChange={(event) =>
-                onChangeDescription(event, props.proDesc[0].id)
-              }
+
+        <div className="top-left">
+          <div className="services-banner-custom d-flex">
+            <h4 className="custom-project-header">Our Projects</h4>
+            <span className="ps-3" onClick={onEditClick}>
+              <i className="bi bi-pencil-fill"></i>
+            </span>
+          </div>
+          <div className="d-none d-sm-block">
+            {edit ? (
+              <CKEditor
+                activeClass="p10"
+                name={props.proDesc[0].name}
+                initData={props.proDesc[0].description}
+                onChange={(event) =>
+                  onChangeDescription(event, props.proDesc[0].id)
+                }
+              />
+            ) : (
+              <p
+                className="service-description"
+                dangerouslySetInnerHTML={{
+                  __html: props.proDesc[0].description,
+                }}
+              ></p>
+            )}
+          </div>
+        </div>
+      </div>
+      <div className="row project-background">
+        <div className="col-lg-6">
+          <div className="card-columns m-5">
+            <div className="card shadow  bg-body rounded">
+              <div>
+                <img
+                  className="project-card-image-style"
+                  src="https://i.ibb.co/fkSLtQp/p1.jpg"
+                  alt="solor"
+                />
+              </div>
+            </div>
+            <div className="card">
+              <div>
+                <img
+                  className="project-card-image-style"
+                  src="https://i.ibb.co/Rgh3TVK/p3.jpg"
+                  alt="solor"
+                />
+              </div>
+            </div>
+            <div className="card">
+              <div>
+                <img
+                  className="project-card-image-style"
+                  src="https://i.ibb.co/Rgh3TVK/p3.jpg"
+                  alt="solor"
+                />
+              </div>
+            </div>
+            <div className="card">
+              <div>
+                <img
+                  className="project-card-image-style"
+                  src="https://i.ibb.co/NCWDYqZ/p2.jpg"
+                  alt="solor"
+                />
+              </div>
+            </div>
+            <div className="card">
+              <div>
+                <img
+                  className="project-card-image-style"
+                  src="https://i.ibb.co/Rgh3TVK/p3.jpg"
+                  alt="solor"
+                />
+              </div>
+            </div>
+            <div className="card">
+              <div>
+                <img
+                  className="project-card-image-style"
+                  src="https://i.ibb.co/Rgh3TVK/p3.jpg"
+                  alt="solor"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-6">
+          <div className="m-5">
+            <h1> Infrastructure Development </h1>
+            <p className="text-color">
+              From major and complex infra projects such as building roads,
+              bridges, airport terminals, metro rail stations, solar power
+              bases, irrigation projects to bus terminals, multi-level parking
+              complexes, sports complexes and many more industrial projects, It
+              executed on end-to-end development on many challenging projects.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="row" className="commercial-bg">
+        <div className="col-lg-6">
+          <div className="m-5">
+            <h1 className="text-color"> Commercial Projects </h1>
+
+            <p className="text-color">
+              Commercial Projects From upscale business complexes, convention
+              centres, auditoriums, IT parks, corporate structures to shopping
+              malls, hyper markets, hospitality, and entertainment complexes,
+              Projects' portfolio boasts of stunning landmark buildings.
+            </p>
+          </div>
+        </div>
+        <div className="col-lg-6">
+          <div className="m-5">
+            <img
+              alt="commercial projects"
+              className="mx-auto d-block custom-box-shadow"
+              src="https://i.ibb.co/hLJFhth/p7.jpg"
             />
-          ) : (
-            <p
-              className="service-description"
-              dangerouslySetInnerHTML={{
-                __html: props.proDesc[0].description,
-              }}
-            ></p>
-          )}
+          </div>
         </div>
       </div>
     </div>
