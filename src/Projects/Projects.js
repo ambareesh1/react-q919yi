@@ -237,7 +237,7 @@ const Projects = (props) => {
       <div className="row project-background">
         <div className="col-lg-6">
           <div className="m-5">
-            <h1> Infrastructure Development </h1>
+            <h1> HealthCare Projects </h1>
             <p className="text-color">
               From major and complex infra projects such as building roads,
               bridges, airport terminals, metro rail stations, solar power
