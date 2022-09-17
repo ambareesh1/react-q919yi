@@ -4,6 +4,7 @@ import Modal from '../Modal/Modal';
 import './Header.css';
 const Header = (props) => {
   const navBarData = props.items;
+  const isAdmin = localStorage.getItem('isAdmin');
   const dataToModal = [
     {
       data: navBarData,
@@ -97,9 +98,11 @@ const Header = (props) => {
                 </li>
               ))}
             </ul>
-            <div onClick={onEditClick}>
-              <i class="bi bi-pencil-fill"></i>
-            </div>
+            {isAdmin == 'true' && (
+              <div onClick={onEditClick}>
+                <i class="bi bi-pencil-fill"></i>
+              </div>
+            )}
             <div className="module-holder">
               <div className="d-none d-sm-block">
                 <div className="block-right">
