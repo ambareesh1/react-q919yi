@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 const Admin = (props) => {
+  localStorage.setItem('isAdmin', false);
   const history = useNavigate();
   const [email, setEmail] = useState('');
   const [pwd, setPwd] = useState('');
