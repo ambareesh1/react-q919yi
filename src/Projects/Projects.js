@@ -211,7 +211,7 @@ const Projects = (props) => {
           </div>
         </div>
       </div>
-      <div className="row" className="commercial-bg">
+      <div className="row commercial-bg">
         <div className="col-lg-6">
           <div className="m-5">
             <h1 className="text-color"> Commercial Projects </h1>
@@ -228,7 +228,7 @@ const Projects = (props) => {
           <div className="m-5">
             <img
               alt="commercial projects"
-              className="mx-auto d-block custom-box-shadow"
+              className="mx-auto d-block custom-box-shadow rounded"
               src="https://i.ibb.co/hLJFhth/p7.jpg"
             />
           </div>
