@@ -1,0 +1,15 @@
+.mx-auto {
+  margin: 0 auto;
+}
+
+.login-bg {
+  background-color: #32c36c;
+}
+
+.login-text-color {
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #1a2a36 !important;
+}

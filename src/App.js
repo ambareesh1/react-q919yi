@@ -7,6 +7,7 @@ import Slider from './Slider/Slider';
 import About from './About/About';
 import Services from './Services/Services';
 import Projects from './Projects/Projects';
+import Admin from './Admin/Admin';
 import { Routes, Route } from 'react-router-dom';
 import { db } from './firebase-config';
 import { collection, getDocs } from 'firebase/firestore';
@@ -136,6 +137,15 @@ function App() {
               proDesc={projectsDescription}
             />
             <Footer />
+          </div>
+        }
+      ></Route>
+      <Route
+        path="Admin"
+        replace
+        element={
+          <div class="wrapper clearfix" id="wrapperParallax">
+            <Admin />
           </div>
         }
       ></Route>
