@@ -13,3 +13,12 @@
 .btn-primary {
   background-color: #1a2a36 !important;
 }
+
+.navbar-title {
+  color: #32c36c !important;
+  font-weight: bold;
+}
+
+.img-height {
+  height: 50px;
+}

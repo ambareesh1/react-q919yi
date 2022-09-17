@@ -2,7 +2,7 @@ import React, { useState, form, useEffect } from 'react';
 import { db } from '../firebase-config';
 import {
   collection,
-  getDocs,
+  getDocs, 
   addDoc,
   updateDoc,
   doc,
