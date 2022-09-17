@@ -248,7 +248,7 @@ const Projects = (props) => {
           </div>
         </div>
         <div className="col-lg-6">
-          <div className="card-columns m-5">
+          <div className="card-columns m-2">
             <div className="card shadow  bg-body rounded">
               <div>
                 <img
