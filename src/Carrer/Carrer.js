@@ -3,8 +3,11 @@ import './Carrer.css';
 const Carrer = () => {
   return (
     <div class="row">
-      <img src="https://i.ibb.co/58CF5pz/p12.jpg" />
-      <div className="d-flex aligns-items-center justify-content-center">
+      <img
+        className="img-height"
+        src="https://i.ibb.co/NWY040Y/pexels-aksonsat-uanthoeng-1078850-1.jpg"
+      />
+      <div className="d-flex aligns-items-center justify-content-center div-on-image">
         <div class="card  card-img mb-3">
           <div class="row g-0">
             <div class="col-md-5">
