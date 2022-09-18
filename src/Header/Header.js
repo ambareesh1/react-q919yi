@@ -83,7 +83,7 @@ const Header = (props) => {
             />
             <img
               className="logo logo-mobile logo-custom"
-              src="assets/images/logo/satilogo.jpeg"
+              src="https://i.ibb.co/55yrdGk/satiprojects-logo.jpg"
               alt="Energia Logo"
             />
           </a>
@@ -104,7 +104,7 @@ const Header = (props) => {
             <ul className="navbar-nav me-auto">
               {navBarData.map((item) => (
                 <li className="nav-item  active" data-hover="">
-                  <NavLink to={item.link}>
+                  <NavLink to={item.link}> 
                     <span key={item.id} className="nav-span-icon-custom">
                       {item.name}
                     </span>

@@ -91,6 +91,7 @@ function App() {
     <Routes>
       <Route
         path="/"
+        replace
         element={
           <div class="wrapper clearfix" id="wrapperParallax">
             <Header items={components} reload={reloadHeader} />
