@@ -75,7 +75,7 @@ const Header = (props) => {
           className="navbar navbar-expand-lg navbar-sticky"
           id="primary-menu"
         >
-          <a className="navbar-brand" href="index.html">
+          <Link className="navbar-brand" to="/">
             <img
               className="logo logo-dark"
               src="https://i.ibb.co/55yrdGk/satiprojects-logo.jpg"
@@ -86,7 +86,7 @@ const Header = (props) => {
               src="https://i.ibb.co/55yrdGk/satiprojects-logo.jpg"
               alt="Energia Logo"
             />
-          </a>
+          </Link>
           <div className="module-holder module-holder-phone">
             <button
               className="navbar-toggler collapsed"
