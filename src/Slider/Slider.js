@@ -87,7 +87,7 @@ const Slider = (props) => {
           </div>
           <div class="carousel-item">
             <img
-              src="https://i.ibb.co/Jx9V5Nq/2.jpg"
+              src="https://i.ibb.co/58CF5pz/p12.jpg"
               class="d-block w-100"
               alt="..."
             />
