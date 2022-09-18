@@ -49,21 +49,25 @@ const Contact = () => {
         </div>
 
         <div className="col-lg-4">
-          <div class="contact-form-wrapper d-flex">
-            <form action="#" class="contact-form">
+          <div class="contact-form-wrapper">
+            <form
+              action="#"
+              class="contact-form shadow-lg p-3 mb-5 bg-body rounded"
+            >
               <h5 class="title">Address</h5>
-              <div class="contact-infos description">
-                <i class="fa-solid fa-phone"></i>
-                <div class="contact-body">
-                  <p>
-                    <a href="tel:919398277980">+91 9398277980</a> &nbsp; &nbsp;
-                    | &nbsp; &nbsp;{' '}
-                    <a href="tel:918125377980">+91 8125377980</a>
-                  </p>
+              <div>
+                <div class="contact-infos">
+                  <i class="fa-solid fa-phone icon"></i>
+                  <div class="contact-body">
+                    <p>
+                      <a href="tel:919398277980">+91 9398277980</a> <br />
+                      <a href="tel:918125377980">+91 8125377980</a>
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div class="contact-infos description">
-                <i class="fa-solid fa-envelope"></i>
+              <div class="contact-infos">
+                <i class="fa-solid fa-envelope icon"></i>
                 <div class="contact-body">
                   <p>
                     <a href="mailto:shrisathip@gmail.com">
@@ -72,8 +76,8 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
-              <div class="contact-infos description">
-                <i class="fa-solid fa-location"></i>
+              <div class="contact-infos ">
+                <i class="fa-solid fa-location icon"></i>
                 <div class="contact-body">
                   <p class=" address-text">
                     HJ8H+9PP Nainavaram,

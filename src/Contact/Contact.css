@@ -98,3 +98,15 @@
 .contact-infos i {
   font-size: large;
 }
+
+.contact-body p {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.icon {
+  padding: 10px;
+  background: lightgrey;
+  text-align: left;
+  color: #607d8b;
+}
