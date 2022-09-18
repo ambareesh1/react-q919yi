@@ -11,3 +11,7 @@
   left: 5%;
   background: #fff;
 }
+
+.service-description p {
+  color: #fff !important;
+}

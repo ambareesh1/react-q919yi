@@ -5,11 +5,11 @@ const Slider = (props) => {
     <section className="slider slider-1" id="slider-1">
       <div
         id="carouselExampleControls"
-        class="carousel slide"
+        class="carousel slide carousel-fade"
         data-bs-ride="carousel"
       >
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <div class="carousel-item  active" data-bs-interval="10000">
             <img
               src="https://i.ibb.co/JrM5cKX/1.jpg"
               class="d-block w-100"
@@ -37,7 +37,7 @@ const Slider = (props) => {
                           Utilizing latest processes solutions, and decades of
                           work experience.
                         </p>
-                        <a href="page-about.html">
+                        <a href="/">
                           <i class="fa-solid fa-circle-arrow-right"></i>
                         </a>
                       </div>
@@ -47,7 +47,7 @@ const Slider = (props) => {
               </div>
             </div>
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item" data-bs-interval="2000">
             <img
               src="https://i.ibb.co/Jx9V5Nq/2.jpg"
               class="d-block w-100"
