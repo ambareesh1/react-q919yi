@@ -1,15 +1,92 @@
 import React, { useState, form, useEffect } from 'react';
+import { Wrapper, Status } from '@googlemaps/react-wrapper';
+import './Contact.css';
 
 const Contact = () => {
   return (
-    <div class="card text-center mx-auto">
-      <div class="card-header"></div>
-      <div class="card-body">
-        <h5 class="card-title">Page under construction</h5>
-        <p class="card-text"></p>
-        <a href="#" class="btn btn-primary"></a>
+    <div className="row">
+      <div className="col-lg-4">
+        <div class="contact-form-wrapper d-flex">
+          <form action="#" class="contact-form">
+            <h5 class="title">Contact us</h5>
+            <p class="description">
+              Feel free to contact us if you need any assistance, any help or
+              another question.
+            </p>
+            <div>
+              <input
+                type="text"
+                class="form-control rounded border-white mb-3 form-input"
+                id="name"
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                class="form-control rounded border-white mb-3 form-input"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div>
+              <textarea
+                id="message"
+                class="form-control rounded border-white mb-3 form-text-area"
+                rows="5"
+                cols="30"
+                placeholder="Message"
+                required
+              ></textarea>
+            </div>
+            <div class="submit-button-wrapper">
+              <input type="submit" value="Send" />
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="card-footer text-muted"></div>
+      <div className="col-lg-4">
+        <div class="contact-form-wrapper d-flex">
+          <form action="#" class="contact-form">
+            <h5 class="title">Contact us</h5>
+            <p class="description">
+              Feel free to contact us if you need any assistance, any help or
+              another question.
+            </p>
+            <div>
+              <input
+                type="text"
+                class="form-control rounded border-white mb-3 form-input"
+                id="name"
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                class="form-control rounded border-white mb-3 form-input"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div>
+              <textarea
+                id="message"
+                class="form-control rounded border-white mb-3 form-text-area"
+                rows="5"
+                cols="30"
+                placeholder="Message"
+                required
+              ></textarea>
+            </div>
+            <div class="submit-button-wrapper">
+              <input type="submit" value="Send" />
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };

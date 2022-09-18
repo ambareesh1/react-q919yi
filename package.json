@@ -5,6 +5,7 @@
   "dependencies": {
     "@firebase/app": "^0.7.32",
     "@firebase/firestore": "^3.4.15",
+    "@googlemaps/react-wrapper": "^1.1.35",
     "@popperjs/core": "^2.11.5",
     "@types/react": ">=16.14.8",
     "bootstrap": "^5.2.0",
