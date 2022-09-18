@@ -77,3 +77,24 @@
 .contact-form .submit-button-wrapper input:hover {
   background-color: #32c36c;
 }
+
+.maps_header {
+  padding: 10px;
+  background-color: #32c36c;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 10%;
+}
+
+.contact-form-bg {
+  background: #e0e0e0;
+}
+
+.address-text {
+  color: #32c36c;
+  text-align: left;
+}
+
+.contact-infos i {
+  font-size: large;
+}
