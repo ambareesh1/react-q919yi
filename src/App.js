@@ -7,6 +7,9 @@ import Slider from './Slider/Slider';
 import About from './About/About';
 import Services from './Services/Services';
 import Projects from './Projects/Projects';
+import Contact from './Contact/Contact';
+import Carrer from './Carrer/Carrer';
+import Projects from './Projects/Projects';
 import Admin from './Admin/Admin';
 import { Routes, Route, Switch } from 'react-router-dom';
 import { db } from './firebase-config';
@@ -133,6 +136,36 @@ function App() {
           <div class="wrapper clearfix" id="wrapperParallax">
             <Header items={components} reload={reloadHeader} />
             <Projects
+              items={projects}
+              reload={reloadProjects}
+              proDesc={projectsDescription}
+            />
+            <Footer />
+          </div>
+        }
+      ></Route>
+      <Route
+        path="career"
+        replace
+        element={
+          <div class="wrapper clearfix" id="wrapperParallax">
+            <Header items={components} reload={reloadHeader} />
+            <Carrer
+              items={projects}
+              reload={reloadProjects}
+              proDesc={projectsDescription}
+            />
+            <Footer />
+          </div>
+        }
+      ></Route>
+      <Route
+        path="contact"
+        replace
+        element={
+          <div class="wrapper clearfix" id="wrapperParallax">
+            <Header items={components} reload={reloadHeader} />
+            <Contact
               items={projects}
               reload={reloadProjects}
               proDesc={projectsDescription}

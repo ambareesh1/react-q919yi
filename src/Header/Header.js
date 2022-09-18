@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Modal from '../Modal/Modal';
 import './Header.css';
 const Header = (props) => {
@@ -61,9 +61,9 @@ const Header = (props) => {
                 <div className="contact-infos">
                   <div className="contact-body">
                     <p>
-                      <NavLink to="/admin">
+                      <Link to="/admin">
                         <i class="bi bi-power"></i>
-                      </NavLink>
+                      </Link>
                     </p>
                   </div>
                 </div>
@@ -104,12 +104,12 @@ const Header = (props) => {
             <ul className="navbar-nav me-auto">
               {navBarData.map((item) => (
                 <li className="nav-item  active" data-hover="">
-                  <NavLink to={item.link}> 
+                  <Link to={item.link}>
                     <span key={item.id} className="nav-span-icon-custom">
                       {item.name}
                     </span>
                     <span className="custom-divider"> | </span>
-                  </NavLink>
+                  </Link>
                 </li>
               ))}
             </ul>
