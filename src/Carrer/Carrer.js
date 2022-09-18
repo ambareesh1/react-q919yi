@@ -20,14 +20,29 @@ const Carrer = () => {
             <div class="col-md-7">
               <div class="card-body">
                 <h5 class="card-title">Join Our Beautiful Journey</h5>
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-                <p class="card-text">
-                  <small class="text-muted">Last updated 3 mins ago</small>
-                </p>
+                <ol class="list-group list-group-numbered">
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Subheading</div>
+                      Cras justo odio
+                    </div>
+                    <span class="badge bg-success rounded-pill">14</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Subheading</div>
+                      Cras justo odio
+                    </div>
+                    <span class="badge bg-success rounded-pill">14</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Subheading</div>
+                      Cras justo odio
+                    </div>
+                    <span class="badge bg-success rounded-pill">14</span>
+                  </li>
+                </ol>
               </div>
             </div>
           </div>
