@@ -43,22 +43,22 @@ const Footer = (props) => {
                   <div className="widget-content">
                     <ul>
                       <li>
-                        <a href="services-turbines.html">Solar Panels</a>
+                        <a href="/">Solar Panels</a>
                       </li>
                       <li>
-                        <a href="services-turbines.html">Wind Turbines</a>
+                        <a href="/">Wind Turbines</a>
                       </li>
                       <li>
-                        <a href="services-turbines.html">Hydropower Plants</a>
+                        <a href="/">Hydropower Plants</a>
                       </li>
                       <li>
-                        <a href="services-turbines.html">Fossil Resources</a>
+                        <a href="/">Fossil Resources</a>
                       </li>
                       <li>
-                        <a href="services-turbines.html">Battery Materials</a>
+                        <a href="/">Battery Materials</a>
                       </li>
                       <li>
-                        <a href="services-turbines.html">biofuels</a>
+                        <a href="/">biofuels</a>
                       </li>
                     </ul>
                   </div>
@@ -73,16 +73,16 @@ const Footer = (props) => {
                   <div className="widget-content">
                     <ul>
                       <li>
-                        <a href="page-contact.html">Terms &amp; Conditions</a>
+                        <a href="/">Terms &amp; Conditions</a>
                       </li>
                       <li>
-                        <a href="page-contact.html">Shipping Policy</a>
+                        <a href="/">Shipping Policy</a>
                       </li>
                       <li>
-                        <a href="page-contact.html">Delivery Tips</a>
+                        <a href="/">Delivery Tips</a>
                       </li>
                       <li>
-                        <a href="page-contact.html">Returns</a>
+                        <a href="/">Returns</a>
                       </li>
                     </ul>
                   </div>
@@ -131,25 +131,19 @@ const Footer = (props) => {
               <div className="col-12">
                 <div className="footer-copyright">
                   <div className="copyright">
-                    <span>
-                      © 2022
-                      all rights reserved.
-                    </span>
+                    <span>© 2022 all rights reserved.</span>
                     <ul className="list-unstyled social-icons">
                       <li>
-                       
                         <a className="share-facebook" href="javascript:void(0)">
                           <i className="energia-facebook"></i>facebook
                         </a>
                       </li>
                       <li>
-                     
                         <a className="share-twitter" href="javascript:void(0)">
                           <i className="energia-twitter"></i>twitter
                         </a>
                       </li>
                       <li>
-                    
                         <a className="share-youtube" href="javascript:void(0)">
                           <i className="energia-youtube"></i>youtube
                         </a>
