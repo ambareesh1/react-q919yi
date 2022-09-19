@@ -148,14 +148,15 @@ const Header = (props) => {
                 </div>
               </div>
               <div className="module-contact">
-                <a
+                <Link
+                to="/contact"
                   className="btn btn--primary"
                   data-toggle="modal"
                   data-target="#postQuote"
                 >
                   request a quote
                   <i className="fa-solid fa-circle-arrow-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
