@@ -132,25 +132,24 @@ const Footer = (props) => {
                 <div className="footer-copyright">
                   <div className="copyright">
                     <span>
-                      © 2021 energia by{' '}
-                      <a href="https://1.envato.market/kP9BV">Zytheme.com</a>.
-                      all rights reserved.{' '}
+                      © 2022
+                      all rights reserved.
                     </span>
                     <ul className="list-unstyled social-icons">
                       <li>
-                        {' '}
+                       
                         <a className="share-facebook" href="javascript:void(0)">
                           <i className="energia-facebook"></i>facebook
                         </a>
                       </li>
                       <li>
-                        {' '}
+                     
                         <a className="share-twitter" href="javascript:void(0)">
                           <i className="energia-twitter"></i>twitter
                         </a>
                       </li>
                       <li>
-                        {' '}
+                    
                         <a className="share-youtube" href="javascript:void(0)">
                           <i className="energia-youtube"></i>youtube
                         </a>

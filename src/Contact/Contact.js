@@ -80,7 +80,7 @@ const Contact = () => {
                 <i class="fa-solid fa-location icon"></i>
                 <div class="contact-body">
                   <p class=" address-text">
-                  #2-85-1 Ambhaburam ,
+                    #2-85-1 Ambhaburam ,
                     <br />
                     Krishna, Andhra Pradesh 521228
                   </p>
