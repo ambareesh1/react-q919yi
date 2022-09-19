@@ -55,6 +55,20 @@ const Header = (props) => {
               </div>
             </div>
           </div>
+          <div className="block-right">
+            <div className="top-contact">
+              <div className="contact-infos">
+                <i class="bi bi-geo-alt-fill"></i>
+                <div className="contact-body">
+                  <p>
+                    <Link to="/contact">
+                      #2-85-1 Ambhaburam Vijayawada Krishna Dist, AP, 520012.
+                    </Link>{' '}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
           {isAdmin == 'true' && (
             <div className="block-right">
               <div className="top-contact">
