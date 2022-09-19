@@ -1,12 +1,12 @@
-.card-img{
+.card-img {
   max-width: 540px;
 }
 
-.div-on-image{
-  top:200px;
+.div-on-image {
+  top: 200px;
   position: absolute;
 }
 
-.img-height{
+.row .img-height {
   height: 700px;
 }

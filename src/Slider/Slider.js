@@ -59,7 +59,7 @@ const Slider = (props) => {
                   <div class="col-12 col-lg-7">
                     <div class="slide-content">
                       <h3 class="slide-headline">
-                        We provide the best secure &amp; Safe service.
+                        We make the things simple &amp;
                       </h3>
                       <p class="slide-desc">
                         We are accoutable for the services provided.
