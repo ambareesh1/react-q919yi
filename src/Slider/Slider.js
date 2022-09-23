@@ -1,8 +1,8 @@
 import React from 'react';
-
+import './Slider.css';
 const Slider = (props) => {
   return (
-    <section className="slider slider-1" id="slider-1">
+    <section className="slider slider-1 d-none d-sm-block" id="slider-1">
       <div
         id="carouselExampleControls"
         class="carousel slide carousel-fade"
@@ -59,7 +59,7 @@ const Slider = (props) => {
                   <div class="col-12 col-lg-7">
                     <div class="slide-content">
                       <h3 class="slide-headline">
-                        We make the things simple &amp;
+                        We make the things simple &amp; significant
                       </h3>
                       <p class="slide-desc">
                         We are accoutable for the services provided.
@@ -97,7 +97,7 @@ const Slider = (props) => {
                   <div class="col-12 col-lg-7">
                     <div class="slide-content">
                       <h3 class="slide-headline">
-                        We provide the best secure &amp; Safe service.
+                        We are service oriented &amp;
                       </h3>
                       <p class="slide-desc">
                         We are accoutable for the services provided.
