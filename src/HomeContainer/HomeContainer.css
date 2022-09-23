@@ -4,3 +4,14 @@
 .header-text-description {
   color: #9b9b9b !important;
 }
+.header-text-description {
+  text-align: justify !important;
+}
+.bi {
+  font-size: 130px;
+}
+
+.icon-contianer-bg {
+  background: #32c36c;
+  color: #fff;
+}

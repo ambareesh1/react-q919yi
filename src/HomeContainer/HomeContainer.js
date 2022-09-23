@@ -4,10 +4,10 @@ const HomeContainer = () => {
   return (
     <div class="row bg-white">
       <div class="container">
-        <div class="shadow p-3 m-3 bg-body rounded">
+        <div class="row shadow p-3 m-3 bg-body rounded">
           <div className="col-lg-8">
             <h3 class="header-text"> Shri Sathi Projects </h3>
-            <p class="header-text-description">
+            <p class="header-text-description text-break">
               Shri Sathi Projects was established in 2017 as Electrical
               consultants by a team of enthusiastic and experienced engineers
               and grown into a complete MEP ( Mechanical, Electrical & Plumbing
@@ -21,7 +21,7 @@ const HomeContainer = () => {
               international codes, practices and also the latest Technical
               developments.
             </p>
-            <p class="header-text-description">
+            <p class="header-text-description text-break">
               We carry out the design engineering as per Indian Standard
               Specifications, Indian Electricity Rules, National Electrical Code
               and local Electricity Board regulations for Indian projects and
@@ -30,10 +30,28 @@ const HomeContainer = () => {
             </p>
           </div>
           <div className="col-lg-4">
-            <i class="bi bi-building"></i>
-            <i class="bi bi-lightning-charge-fill"></i>
-            <i class="bi bi-nintendo-switch"></i>
-            <i class="bi bi-pip-fill"></i>
+            <div className="row">
+              <h4 className="icon-contianer-bg"> Service we provide </h4>
+              <div className="row">
+                <div className="col-lg-6">
+                  <div className="col-lg-3">
+                    <i class="bi bi-building"></i>
+                  </div>
+                  <div className="col-lg-3">
+                    <i class="bi bi-lightning-charge-fill"></i>
+                  </div>
+                </div>
+                <div className="col-lg-6">
+                  <div className="col-lg-3">
+                    {' '}
+                    <i class="bi bi-nintendo-switch"></i>
+                  </div>
+                  <div className="col-lg-3">
+                    <i class="bi bi-pip-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
