@@ -29,7 +29,12 @@ const HomeContainer = () => {
               for international projects.
             </p>
           </div>
-          <div className="col-lg-4"></div>
+          <div className="col-lg-4">
+            <i class="bi bi-building"></i>
+            <i class="bi bi-lightning-charge-fill"></i>
+            <i class="bi bi-nintendo-switch"></i>
+            <i class="bi bi-pip-fill"></i>
+          </div>
         </div>
       </div>
     </div>
