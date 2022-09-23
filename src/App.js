@@ -11,6 +11,7 @@ import Contact from './Contact/Contact';
 import Carrer from './Carrer/Carrer';
 import Projects from './Projects/Projects';
 import Admin from './Admin/Admin';
+import HomeContainer from './HomeContainer/HomeContainer';
 import { Routes, Route, Switch } from 'react-router-dom';
 import { db } from './firebase-config';
 import { collection, getDocs } from 'firebase/firestore';
@@ -99,6 +100,7 @@ function App() {
           <div class="wrapper clearfix" id="wrapperParallax">
             <Header items={components} reload={reloadHeader} />
             <Slider />
+            <HomeContainer />
             <Footer />
           </div>
         }
