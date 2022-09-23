@@ -30,23 +30,18 @@ const HomeContainer = () => {
             </p>
           </div>
           <div className="col-lg-4">
-            <div className="row">
-              <h4 className="icon-contianer-bg"> Service we provide </h4>
+            <div className="row shadow-lg p-3 mb-5 bg-body rounded">
+              <h4 className="icon-contianer-bg"> Services we provide </h4>
               <div className="row">
                 <div className="col-lg-6">
                   <div className="col-lg-3">
                     <i class="bi bi-building"></i>
-                  </div>
-                  <div className="col-lg-3">
                     <i class="bi bi-lightning-charge-fill"></i>
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <div className="col-lg-3">
-                    {' '}
                     <i class="bi bi-nintendo-switch"></i>
-                  </div>
-                  <div className="col-lg-3">
                     <i class="bi bi-pip-fill"></i>
                   </div>
                 </div>
