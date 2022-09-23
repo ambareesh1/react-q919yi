@@ -97,7 +97,8 @@ const Slider = (props) => {
                   <div class="col-12 col-lg-7">
                     <div class="slide-content">
                       <h3 class="slide-headline">
-                        We are service oriented &amp;
+                        We are with best workers &amp; they provide the
+                        excellent service at their best.
                       </h3>
                       <p class="slide-desc">
                         We are accoutable for the services provided.
