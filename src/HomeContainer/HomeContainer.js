@@ -6,7 +6,7 @@ const HomeContainer = () => {
       <div class="container">
         <div class="row shadow p-3 m-3 bg-body rounded">
           <div className="col-lg-8">
-            <h3 class="header-text"> Shri Sathi Projects </h3>
+            <h3 class="header-text"> Our <span className="our-color">Journey</span>  </h3>
             <p class="header-text-description text-break">
               Shri Sathi Projects was established in 2017 as Electrical
               consultants by a team of enthusiastic and experienced engineers
