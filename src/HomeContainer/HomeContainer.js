@@ -7,7 +7,7 @@ const HomeContainer = () => {
         <div class="shadow p-3 m-3 bg-body rounded">
           <h3 class="header-text"> Shri Sathi Projects </h3>
           <p class="header-text-description">
-            Synergy infra Consultants was established in 1995 as Electrical
+            Shri Sathi Projects was established in 2017 as Electrical
             consultants by a team of enthusiastic and experienced engineers and
             grown into a complete MEP ( Mechanical, Electrical & Plumbing )
             Consultancy Organization with special focus on Energy Conservation,
