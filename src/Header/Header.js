@@ -122,7 +122,7 @@ const Header = (props) => {
                     <span key={item.id} className="nav-span-icon-custom">
                       {item.name}
                     </span>
-                    <span className="custom-divider"> | </span>
+                    <span className="custom-divider d-none d-sm-block">|</span>
                   </Link>
                 </li>
               ))}
@@ -132,8 +132,8 @@ const Header = (props) => {
                 <i class="bi bi-pencil-fill"></i>
               </div>
             )}
-            <div className="module-holder">
-              <div className="d-none d-sm-block">
+            <div className="module-holder module-header-custom-background">
+              <div className="d-none d-sm-flex">
                 <div className="block-right">
                   <img
                     src="https://i.ibb.co/XSCGJNK/makeinindia.png"
@@ -149,7 +149,7 @@ const Header = (props) => {
               </div>
               <div className="module-contact">
                 <Link
-                to="/contact"
+                  to="/contact"
                   className="btn btn--primary"
                   data-toggle="modal"
                   data-target="#postQuote"
