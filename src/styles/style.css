@@ -2138,7 +2138,7 @@ ul.list-icons li i {
 @media screen and (max-width: 991.98px) {
   .header .navbar-brand .logo {
     width: auto;
-    height: 50px;
+    /* height: 50px; */
   }
 }
 @media screen and (max-width: 767.98px) {
