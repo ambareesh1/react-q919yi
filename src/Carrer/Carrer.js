@@ -10,7 +10,7 @@ const Carrer = () => {
       <div className="d-flex aligns-items-center justify-content-center div-on-image">
         <div class="card  card-img mb-3">
           <div class="row g-0">
-            <div class="col-md-5">
+            <div class="col-md-5 d-none d-sm-block">
               <img
                 src="https://i.ibb.co/CV3fsLy/pexels-linda-ellershein-3127880.jpg"
                 class="img-fluid rounded-start shadow p-3 mb-5 bg-body rounded"
