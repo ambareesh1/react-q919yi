@@ -8,7 +8,7 @@
   text-align: justify !important;
 }
 .biu {
-  font-size: 130px;
+  font-size: 50px;
   margin: 2%;
 }
 
@@ -20,4 +20,9 @@
 
 .our-color {
   color: #253745 !important;
+}
+
+.services-icon-description {
+  padding-left: 3%;
+  line-height: 3;
 }

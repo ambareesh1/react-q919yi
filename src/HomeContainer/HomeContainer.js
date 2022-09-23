@@ -35,16 +35,31 @@ const HomeContainer = () => {
             <div className="row shadow-lg p-3 mb-5 bg-body rounded">
               <h4 className="icon-contianer-bg"> Services we provide </h4>
               <div className="row">
-                <div className="col-lg-6">
-                  <div className="col-lg-3">
+                <div class="d-flex flex-column mb-3">
+                  <div class="p-2">
                     <i class="bi bi-building biu"></i>
-                    <i class="bi bi-lightning-charge-fill biu"></i>
+                    <p className="services-icon-description">
+                      <span className="text-bold"> Electrical & Plumbing </span>
+                    </p>
                   </div>
-                </div>
-                <div className="col-lg-6">
-                  <div className="col-lg-3">
+                  <div class="p-2">
+                    <i class="bi bi-lightning-charge-fill biu"></i>
+                    <p className="services-icon-description">
+                      <span className="text-bold"> Electrical & Plumbing </span>
+                    </p>
+                  </div>
+                  <div class="p-2">
                     <i class="bi bi-nintendo-switch biu"></i>
+                    <p className="services-icon-description">
+                      <span className="text-bold"> Electrical & Plumbing </span>
+                    </p>
+                  </div>
+                  <div class="p-2">
                     <i class="bi bi-pip-fill biu"></i>
+
+                    <p className="services-icon-description">
+                      <span className="text-bold"> Electrical & Plumbing </span>
+                    </p>
                   </div>
                 </div>
               </div>
