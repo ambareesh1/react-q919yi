@@ -37,14 +37,14 @@ const HomeContainer = () => {
               <div className="row">
                 <div className="col-lg-6">
                   <div className="col-lg-3">
-                    <i class="bi bi-building"></i>
-                    <i class="bi bi-lightning-charge-fill"></i>
+                    <i class="bi bi-building biu"></i>
+                    <i class="bi bi-lightning-charge-fill biu"></i>
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <div className="col-lg-3">
-                    <i class="bi bi-nintendo-switch"></i>
-                    <i class="bi bi-pip-fill"></i>
+                    <i class="bi bi-nintendo-switch biu"></i>
+                    <i class="bi bi-pip-fill biu"></i>
                   </div>
                 </div>
               </div>
