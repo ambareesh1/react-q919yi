@@ -58,3 +58,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.card-width {
+  width: 18rem;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: var(--global--color-primary) !important;
+}
