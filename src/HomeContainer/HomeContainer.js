@@ -36,6 +36,7 @@ const HomeContainer = () => {
           </div>
         </div>
       </div>
+      <div className="parallax-service"> </div>
     </div>
   );
 };

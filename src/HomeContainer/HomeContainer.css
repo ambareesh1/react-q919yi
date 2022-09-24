@@ -45,3 +45,16 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.parallax-service {
+  background-image: url('https://i.ibb.co/3r0bYKn/home-page-2.jpg');
+
+  /* Set a specific height */
+  min-height: 300px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
