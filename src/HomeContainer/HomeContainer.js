@@ -40,9 +40,9 @@ const HomeContainer = () => {
       <div className="container">
         <h1 className="services-header-custom"> Services </h1>
         <div class="row shadow p-3 m-3 bg-body rounded">
-          <div class="d-flex align-items-start">
+          <div class="row">
             <div
-              class="nav flex-column nav-pills"
+              class="nav flex-column nav-pills col-sm-2"
               id="v-pills-tab"
               role="tablist"
               aria-orientation="vertical"
@@ -132,7 +132,7 @@ const HomeContainer = () => {
                 Fire Fighting
               </button>
             </div>
-            <div class="tab-content ms-3" id="v-pills-tabContent">
+            <div class="col-sm-10  tab-content" id="v-pills-tabContent">
               <div
                 class="tab-pane fade show active"
                 id="v-pills-home"
@@ -141,8 +141,8 @@ const HomeContainer = () => {
                 tabindex="0"
               >
                 <div class="row">
-                  <div class="d-flex">
-                    <div class="col-8">
+                  <div class="row">
+                    <div class="col-sm-8">
                       <p class="text-justify text-break">
                         Shri Sathi Projects Consultants was established in 2018
                         as Electrical consultants by a team of enthusiastic and
@@ -165,7 +165,7 @@ const HomeContainer = () => {
                         IMC, TAC etc for international projects.
                       </p>
                     </div>
-                    <div class="col-4">
+                    <div class="col-sm-4">
                       <div class="card card-width">
                         <img
                           src="https://i.ibb.co/HqkJ7kf/My-project.png"
@@ -191,7 +191,7 @@ const HomeContainer = () => {
                 tabindex="0"
               >
                 <div className="row">
-                  <div className="col-8">
+                  <div className="col-sm-8">
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item ">
                         Installing, maintaining, and repairing electrical
@@ -229,7 +229,7 @@ const HomeContainer = () => {
                       </li>
                     </ul>
                   </div>
-                  <div className="col-4">
+                  <div className="col-sm-4">
                     <div class="card card-width">
                       <img
                         src="https://i.ibb.co/jL9K97Z/image.jpg"
@@ -255,7 +255,7 @@ const HomeContainer = () => {
                 tabindex="0"
               >
                 <div className="row">
-                  <div className="col-8">
+                  <div className="col-sm-8">
                     <p>
                       Civil construction falls in the category of civil
                       engineering which is all about designing, constructing and
@@ -263,7 +263,7 @@ const HomeContainer = () => {
                       Civil construction is the art of building bridges, dams,
                       roads, airports, canals, and buildings.
                     </p>
-                    <p className="mt-2">
+                    <p className="mt-sm-2">
                       In today’s society, there are huge projects meant for
                       civil construction and engineering. The infrastructure
                       used in our daily lives all has been created because of
@@ -272,7 +272,7 @@ const HomeContainer = () => {
                       all are a contribution of civil engineering.
                     </p>
                   </div>
-                  <div className="col-4">
+                  <div className="col-sm-4">
                     <div class="card card-width">
                       <img
                         src="https://www.approvedcourse.com/wp-content/uploads/2021/07/Civil-Engineer.png"
@@ -297,7 +297,7 @@ const HomeContainer = () => {
                 tabindex="0"
               >
                 <div className="row">
-                  <div className="col-8">
+                  <div className="col-sm-8">
                     <p>
                       Plumbers install and repair pipes and fixtures that carry
                       water, gas, or other fluids in homes and businesses. They
@@ -319,7 +319,7 @@ const HomeContainer = () => {
                       safety when the two systems work simultaneously.{' '}
                     </p>
                   </div>
-                  <div className="col-4">
+                  <div className="col-sm-4">
                     <div class="card card-width">
                       <img
                         src="https://img.freepik.com/free-vector/frustrated-female-person-team-plumbers-bathroom-maintenance-workers-helping-woman-with-plumbing-flat-vector-illustration-repair-service-concept-banner-website-design-landing-page_74855-24141.jpg?w=996&t=st=1664033288~exp=1664033888~hmac=d2e28b4e3c3eb21b6537779540fed0113d5449751df75b53991021db3a57707f"
@@ -344,7 +344,7 @@ const HomeContainer = () => {
                 tabindex="0"
               >
                 <div className="row">
-                  <div className="col-8">
+                  <div className="col-sm-8">
                     <p>
                       Mechanical Engineers design and develop new devices while
                       also improving existing ones. They analyze the mechanical
@@ -363,7 +363,7 @@ const HomeContainer = () => {
                       production begins.
                     </p>
                   </div>
-                  <div className="col-4">
+                  <div className="col-sm-4">
                     <div class="card card-width">
                       <img
                         src="https://img.collegedekhocdn.com/media/img/careers/mechanical-eng111.jpg"
@@ -388,7 +388,7 @@ const HomeContainer = () => {
                 tabindex="0"
               >
                 <div className="row">
-                  <div className="col-8">
+                  <div className="col-sm-8">
                     <p>
                       As a solar panel installer, you will be responsible for
                       installing and servicing solar panels on buildings and
@@ -405,7 +405,7 @@ const HomeContainer = () => {
                       acres of rural land.
                     </p>
                   </div>
-                  <div className="col-4">
+                  <div className="col-sm-4">
                     <div class="card card-width">
                       <img
                         src="https://previews.123rf.com/images/stmool/stmool1610/stmool161000008/68016981-flat-design-vector-illustration-electricity-graphic-elements.jpg?fj=1"
@@ -430,7 +430,7 @@ const HomeContainer = () => {
                 tabindex="0"
               >
                 <div className="row">
-                  <div className="col-8">
+                  <div className="col-sm-8">
                     <p>
                       A firefighter is a first responder and rescuer extensively
                       trained in firefighting, primarily to extinguish hazardous
@@ -447,7 +447,7 @@ const HomeContainer = () => {
                       facilities.
                     </p>
                   </div>
-                  <div className="col-4">
+                  <div className="col-sm-4">
                     <div class="card card-width">
                       <img
                         src="https://previews.123rf.com/images/kritiya/kritiya1207/kritiya120700058/14600490-hydrant-with-water-hoses-and-fire-extinguish-equipment.jpg?fj=1"

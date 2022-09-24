@@ -82,7 +82,7 @@
 }
 
 .btn-width {
-  width: 160px;
+  width: 104%;
   height: 40px;
   font-weight: bold;
 }
@@ -102,9 +102,13 @@
 }
 
 #v-pills-tab {
-  background: lightgrey;
+  background: #d3d3d370;
 }
 
-.card-footer-bg{
+.card-footer-bg {
   background: #253745;
+}
+
+.tabs-width {
+  width: 104%;
 }
