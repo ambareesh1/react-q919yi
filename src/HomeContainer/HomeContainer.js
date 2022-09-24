@@ -471,9 +471,9 @@ const HomeContainer = () => {
       <div className="container">
         <h1 className="services-header-custom"> Projects </h1>
         <div class="row p-3 project-bg">
-          <div class="d-flex project-bg">
-            <div class="col-lg-3">
-              <div class="card">
+          <div class="row project-bg">
+            <div class="col-sm-3">
+              <div class="card shadow p-3 mb-5 bg-body rounded">
                 <img
                   class="card-img-top project-card-height"
                   src="https://i.ibb.co/GpGt5TD/p1.jpg"
@@ -492,8 +492,8 @@ const HomeContainer = () => {
               </div>
             </div>
 
-            <div class="col-lg-3">
-              <div class="card">
+            <div class="col-sm-3">
+              <div class="card shadow p-3 mb-5 bg-body rounded">
                 <img
                   class="card-img-top project-card-height"
                   src="https://i.ibb.co/pR4YQ9V/p9.jpg"
@@ -512,8 +512,8 @@ const HomeContainer = () => {
               </div>
             </div>
 
-            <div class="col-lg-3">
-              <div class="card">
+            <div class="col-sm-3">
+              <div class="card shadow p-3 mb-5 bg-body rounded">
                 <img
                   class="card-img-top project-card-height"
                   src="https://i.ibb.co/S3vX6Rj/p3.jpg"
@@ -532,8 +532,8 @@ const HomeContainer = () => {
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
-              <div class="card">
+            <div class="col-sm-3">
+              <div class="card shadow p-3 mb-5 bg-body rounded">
                 <img
                   class="card-img-top project-card-height"
                   src="https://i.ibb.co/wBcvsMw/p4.jpg"
