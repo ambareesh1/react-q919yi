@@ -70,3 +70,9 @@
 .btn-width {
   width: 160px;
 }
+
+.services-header-custom {
+  color: #32c36c;
+  padding: 5px;
+  font-weight: bold;
+}

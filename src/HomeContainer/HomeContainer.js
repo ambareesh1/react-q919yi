@@ -38,6 +38,7 @@ const HomeContainer = () => {
       </div>
       <div className="parallax-service"> </div>
       <div className="container">
+        <h1 className="services-header-custom"> Services </h1>
         <div class="row shadow p-3 m-3 bg-body rounded">
           <div class="d-flex align-items-start">
             <div
