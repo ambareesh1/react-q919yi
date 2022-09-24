@@ -58,6 +58,19 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.parallax-project {
+  background-image: url('https://img.freepik.com/premium-photo/technology-network-background_34629-304.jpg?w=996');
+
+  /* Set a specific height */
+  min-height: 300px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .card-width {
   width: 18rem;
 }
@@ -75,4 +88,12 @@
   color: #32c36c;
   padding: 5px;
   font-weight: bold;
+}
+
+.project-card-height{
+  height: 180px;
+}
+
+.project-bg{
+  background: #f8f9fa;
 }

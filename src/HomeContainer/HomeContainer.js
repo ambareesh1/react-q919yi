@@ -245,6 +245,94 @@ const HomeContainer = () => {
           </div>
         </div>
       </div>
+      <div className="parallax-project"> </div>
+      <div className="container">
+        <h1 className="services-header-custom"> Projects </h1>
+        <div class="row p-3 project-bg">
+          <div class="d-flex project-bg">
+            <div class="col-lg-3">
+              <div class="card">
+                <img
+                  class="card-img-top project-card-height"
+                  src="https://i.ibb.co/GpGt5TD/p1.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    25mw floated solar power plant in vizag
+                  </h5>
+                  <p class="card-text">
+                    We provided the best in delivering the product with quality.
+                    The solar panels are fixed in stipulated time &amp; the
+                    technicians &amp; labours provided better quality of work.{' '}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3">
+              <div class="card">
+                <img
+                  class="card-img-top project-card-height"
+                  src="https://i.ibb.co/pR4YQ9V/p9.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    AIIMS nagpur, mangalagiri &amp; kalyani technical execution
+                  </h5>
+                  <p class="card-text">
+                    We provided the best in delivering the product with quality.
+                    The solar panels are fixed in stipulated time &amp; the
+                    technicians &amp; labours provided better quality of work.{' '}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3">
+              <div class="card">
+                <img
+                  class="card-img-top project-card-height"
+                  src="https://i.ibb.co/S3vX6Rj/p3.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Godrej &amp; KEC international river hills apartment &amp;
+                    villas pune,
+                  </h5>
+                  <p class="card-text">
+                    We provided the best in delivering the product with quality.
+                    The solar panels are fixed in stipulated time &amp; the
+                    technicians &amp; labours provided better quality of work.{' '}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="card">
+                <img
+                  class="card-img-top project-card-height"
+                  src="https://i.ibb.co/wBcvsMw/p4.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    33/11 kv Substations odisha &amp; Andhra government erection
+                    &amp; commissioning projects
+                  </h5>
+                  <p class="card-text">
+                    We provided the best in delivering the product with quality.
+                    The solar panels are fixed in stipulated time &amp; the
+                    technicians &amp; labours provided better quality of work.{' '}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
