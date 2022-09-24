@@ -69,7 +69,7 @@ const HomeContainer = () => {
                 aria-controls="v-pills-profile"
                 aria-selected="false"
               >
-                Renewable Energy
+                Electrical
               </button>
               <button
                 class="nav-link text-start btn-width"
@@ -94,7 +94,7 @@ const HomeContainer = () => {
                 aria-controls="v-pills-messages"
                 aria-selected="false"
               >
-                Electrical
+                Plumbing
               </button>
               <button
                 class="nav-link text-start btn-width"
@@ -142,7 +142,7 @@ const HomeContainer = () => {
                 aria-controls="v-pills-settings"
                 aria-selected="false"
               >
-                BIM
+                Solar
               </button>
             </div>
             <div class="tab-content ms-3" id="v-pills-tabContent">
@@ -156,7 +156,7 @@ const HomeContainer = () => {
                 <div class="row">
                   <div class="d-flex">
                     <div class="col-8">
-                      <p class="text-justify">
+                      <p class="text-justify text-break">
                         Shri Sathi Projects Consultants was established in 2018
                         as Electrical consultants by a team of enthusiastic and
                         experienced engineers and grown into a complete MEP (
@@ -181,14 +181,14 @@ const HomeContainer = () => {
                     <div class="col-4">
                       <div class="card card-width">
                         <img
-                          src="https://thumbs.dreamstime.com/z/electricians-work-wiring-lighting-flat-vector-illustration-isolated-working-indoors-white-background-electrical-221226713.jpg"
+                          src="https://i.ibb.co/HqkJ7kf/My-project.png"
                           class="card-img-top"
                           alt="..."
                         />
                         <div class="card-body">
                           <p class="card-text">
-                            Some quick example text to build on the card title
-                            and make up the bulk of the card's content.
+                            We gave our 100% best efforts to make the client
+                            satisfied with our services.
                           </p>
                         </div>
                       </div>
@@ -203,16 +203,41 @@ const HomeContainer = () => {
                 aria-labelledby="v-pills-profile-tab"
                 tabindex="0"
               >
-                <p>
-                  Shri Sathi Projects has carried out a few MW range solar PV
-                  projects and has been monitoring the performance for quite
-                  some time. Shri Sathi Projects office is the best example with
-                  Net metering and nearly above 60 to 70% of daily consumption
-                  for the last two years. Shri Sathi Projects can conduct pre
-                  installation study i.e solar insolation, designing of PV
-                  system and extend complete support in execution and
-                  commissioning of the system
-                </p>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item ">
+                    Installing, maintaining, and repairing electrical control,
+                    wiring, and lighting systems.
+                  </li>
+                  <li class="list-group-item">
+                    Reading technical diagrams and blueprints.
+                  </li>
+                  <li class="list-group-item">
+                    Performing general electrical maintenance.
+                  </li>
+                  <li class="list-group-item">
+                    Inspecting transformers, circuit breakers, and other
+                    electrical components.
+                  </li>
+                  <li class="list-group-item">
+                    Troubleshooting electrical issues using appropriate testing
+                    devices.
+                  </li>
+                  <li class="list-group-item">
+                    Repairing and replacing equipment, electrical wiring, and
+                    fixtures.
+                  </li>
+                  <li class="list-group-item">
+                    Following National Electrical Code state and local building
+                    regulations.
+                  </li>
+                  <li class="list-group-item">
+                    Performing circuit breaker corrective maintenance.
+                  </li>
+                  <li class="list-group-item">
+                    Maintaining good knowledge of heating and air conditioning
+                    systems as well as various testing equipment.
+                  </li>
+                </ul>
               </div>
               <div
                 class="tab-pane fade"

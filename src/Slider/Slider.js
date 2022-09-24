@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Slider.css';
 const Slider = (props) => {
   return (
@@ -37,9 +38,9 @@ const Slider = (props) => {
                           Utilizing latest processes solutions, and decades of
                           work experience.
                         </p>
-                        <a href="/">
+                        <Link to="/projects">
                           <i class="fa-solid fa-circle-arrow-right"></i>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -75,9 +76,9 @@ const Slider = (props) => {
                           Utilizing latest processes solutions, and decades of
                           work experience.
                         </p>
-                        <a href="page-about.html">
+                        <Link to="/projects">
                           <i class="fa-solid fa-circle-arrow-right"></i>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -113,9 +114,9 @@ const Slider = (props) => {
                           Utilizing latest processes solutions, and decades of
                           work experience.
                         </p>
-                        <a href="page-about.html">
+                        <Link to="/projects">
                           <i class="fa-solid fa-circle-arrow-right"></i>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

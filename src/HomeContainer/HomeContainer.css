@@ -76,12 +76,15 @@
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
+  color: #253745 !important;
   background-color: var(--global--color-primary) !important;
+  box-shadow: 2px 2px 3px #888888;
 }
 
 .btn-width {
   width: 160px;
+  height: 40px;
+  font-weight: bold;
 }
 
 .services-header-custom {
@@ -90,10 +93,14 @@
   font-weight: bold;
 }
 
-.project-card-height{
+.project-card-height {
   height: 180px;
 }
 
-.project-bg{
+.project-bg {
   background: #f8f9fa;
+}
+
+#v-pills-tab {
+  background: lightgrey;
 }

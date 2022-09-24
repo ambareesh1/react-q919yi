@@ -8,7 +8,7 @@ const Header = (props) => {
   const dataToModal = [
     {
       data: navBarData,
-      title: 'Navbar',
+    title: 'Navbar',
     },
   ];
 
