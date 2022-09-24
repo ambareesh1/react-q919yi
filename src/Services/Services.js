@@ -69,6 +69,7 @@ const Services = (props) => {
   const addItem = async (event) => {
     debugger;
     let item = {
+      identifier: title,
       name: title,
       description: desc,
       category: 'tabs',
@@ -141,7 +142,7 @@ const Services = (props) => {
         </div>
       </div>
 
-      <div className="container shadow p-3 mb-5 bg-body rounded">
+      <div className="container shadow p-3 mb-5 bg-body rounded service-container-height">
         <div className="m-2">
           {edit && (
             <button

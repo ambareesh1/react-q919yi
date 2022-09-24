@@ -61,6 +61,7 @@ function App() {
       id: doc.id,
     }));
     // serviceData.sort((a, b) => (a.order > b.order ? 1 : -1));
+    debugger;
     let serviceDes = serviceData.filter((x) => x.category == 'description');
     setService(serviceData.filter((x) => x.category == 'tabs')); //aboutData.filter((x) => x.active)
     setServiceDescription(serviceDes);

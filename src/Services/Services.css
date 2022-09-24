@@ -15,3 +15,7 @@
 .service-description p {
   color: #fff !important;
 }
+
+.service-container-height {
+  height: 500px;
+}
