@@ -131,18 +131,6 @@ const HomeContainer = () => {
               >
                 Fire Fighting
               </button>
-              <button
-                class="nav-link text-start btn-width"
-                id="v-pills-settings-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-settings"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-settings"
-                aria-selected="false"
-              >
-                ELV
-              </button>
             </div>
             <div class="tab-content ms-3" id="v-pills-tabContent">
               <div
