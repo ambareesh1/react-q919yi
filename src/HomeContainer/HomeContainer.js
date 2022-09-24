@@ -323,7 +323,7 @@ const HomeContainer = () => {
                       It's also essential for them to have good communication
                       skills to convey any problems.
                     </p>
-                    <p>
+                    <p className="mt-2">
                       Plumbers collaborate with professionals like Electricians
                       who install electrical fixtures. These individuals work in
                       tandem to ensure their work is adequate to operate
