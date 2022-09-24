@@ -92,13 +92,13 @@ const Header = (props) => {
           <Link className="navbar-brand" to="/">
             <img
               className="logo logo-dark"
-              src="https://i.ibb.co/55yrdGk/satiprojects-logo.jpg"
-              alt="Energia Logo"
+              src="https://i.ibb.co/J3MPz7j/Logo-new-final.jpg"
+              alt="Shri Sathi Projects"
             />
             <img
               className="logo logo-mobile logo-custom"
-              src="https://i.ibb.co/55yrdGk/satiprojects-logo.jpg"
-              alt="Energia Logo"
+              src="https://i.ibb.co/J3MPz7j/Logo-new-final.jpg"
+              alt="Shri Sathi Projects"
             />
           </Link>
           <div className="module-holder module-holder-phone">

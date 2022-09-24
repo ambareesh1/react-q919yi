@@ -2132,8 +2132,8 @@ ul.list-icons li i {
 }
 .header .navbar-brand .logo {
   max-width: 100%;
-  width: 160px;
-  height: 60px;
+  /* width: 160px; */
+  height: 70px;
 }
 @media screen and (max-width: 991.98px) {
   .header .navbar-brand .logo {
@@ -2198,7 +2198,7 @@ ul.list-icons li i {
 }
 @media screen and (min-width: 992px) {
   .header.header-topbar .navbar {
-    padding: 0 0 0 40px;
+    padding: 0 0 0 10px;
     min-height: 100px;
     position: relative;
     top: auto;
