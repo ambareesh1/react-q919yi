@@ -78,20 +78,19 @@ const HomeContainer = () => {
                 data-bs-target="#v-pills-disabled"
                 type="button"
                 role="tab"
-                aria-controls="v-pills-disabled"
+                data-bs-target="#v-pills-messages"
                 aria-selected="false"
-                disabled
               >
                 Civil
               </button>
               <button
                 class="nav-link text-start btn-width"
-                id="v-pills-messages-tab"
+                id="v-pills-plumbing-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#v-pills-messages"
+                data-bs-target="#v-pills-plumbing"
                 type="button"
                 role="tab"
-                aria-controls="v-pills-messages"
+                aria-controls="v-pills-plumbing"
                 aria-selected="false"
               >
                 Plumbing
@@ -185,8 +184,8 @@ const HomeContainer = () => {
                           class="card-img-top"
                           alt="..."
                         />
-                        <div class="card-body">
-                          <p class="card-text">
+                        <div class="card-body card-footer-bg">
+                          <p class="card-text ">
                             We gave our 100% best efforts to make the client
                             satisfied with our services.
                           </p>
@@ -203,51 +202,63 @@ const HomeContainer = () => {
                 aria-labelledby="v-pills-profile-tab"
                 tabindex="0"
               >
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item ">
-                    Installing, maintaining, and repairing electrical control,
-                    wiring, and lighting systems.
-                  </li>
-                  <li class="list-group-item">
-                    Reading technical diagrams and blueprints.
-                  </li>
-                  <li class="list-group-item">
-                    Performing general electrical maintenance.
-                  </li>
-                  <li class="list-group-item">
-                    Inspecting transformers, circuit breakers, and other
-                    electrical components.
-                  </li>
-                  <li class="list-group-item">
-                    Troubleshooting electrical issues using appropriate testing
-                    devices.
-                  </li>
-                  <li class="list-group-item">
-                    Repairing and replacing equipment, electrical wiring, and
-                    fixtures.
-                  </li>
-                  <li class="list-group-item">
-                    Following National Electrical Code state and local building
-                    regulations.
-                  </li>
-                  <li class="list-group-item">
-                    Performing circuit breaker corrective maintenance.
-                  </li>
-                  <li class="list-group-item">
-                    Maintaining good knowledge of heating and air conditioning
-                    systems as well as various testing equipment.
-                  </li>
-                </ul>
+                <div className="row">
+                  <div className="col-8">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item ">
+                        Installing, maintaining, and repairing electrical
+                        control, wiring, and lighting systems.
+                      </li>
+                      <li class="list-group-item">
+                        Reading technical diagrams and blueprints.
+                      </li>
+                      <li class="list-group-item">
+                        Performing general electrical maintenance.
+                      </li>
+                      <li class="list-group-item">
+                        Inspecting transformers, circuit breakers, and other
+                        electrical components.
+                      </li>
+                      <li class="list-group-item">
+                        Troubleshooting electrical issues using appropriate
+                        testing devices.
+                      </li>
+                      <li class="list-group-item">
+                        Repairing and replacing equipment, electrical wiring,
+                        and fixtures.
+                      </li>
+                      <li class="list-group-item">
+                        Following National Electrical Code state and local
+                        building regulations.
+                      </li>
+                      <li class="list-group-item">
+                        Performing circuit breaker corrective maintenance.
+                      </li>
+                      <li class="list-group-item">
+                        Maintaining good knowledge of heating and air
+                        conditioning systems as well as various testing
+                        equipment.
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-4">
+                    <div class="card card-width">
+                      <img
+                        src="https://i.ibb.co/jL9K97Z/image.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body card-footer-bg">
+                        <p class="card-text ">
+                          We gave our 100% best efforts to make the client
+                          satisfied with our services.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div
-                class="tab-pane fade"
-                id="v-pills-disabled"
-                role="tabpanel"
-                aria-labelledby="v-pills-disabled-tab"
-                tabindex="0"
-              >
-                ...
-              </div>
+
               <div
                 class="tab-pane fade"
                 id="v-pills-messages"
@@ -255,7 +266,87 @@ const HomeContainer = () => {
                 aria-labelledby="v-pills-messages-tab"
                 tabindex="0"
               >
-                ...
+                <div className="row">
+                  <div className="col-8">
+                    <p>
+                      Civil construction falls in the category of civil
+                      engineering which is all about designing, constructing and
+                      maintaining the physical and naturally built environment.
+                      Civil construction is the art of building bridges, dams,
+                      roads, airports, canals, and buildings.
+                    </p>
+                    <p className="mt-2">
+                      In today’s society, there are huge projects meant for
+                      civil construction and engineering. The infrastructure
+                      used in our daily lives all has been created because of
+                      civil construction and engineering. The roads, railways,
+                      stadiums, harbors, schools and other buildings constructed
+                      all are a contribution of civil engineering.
+                    </p>
+                  </div>
+                  <div className="col-4">
+                    <div class="card card-width">
+                      <img
+                        src="https://www.approvedcourse.com/wp-content/uploads/2021/07/Civil-Engineer.png"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body card-footer-bg">
+                        <p class="card-text ">
+                          We gave our 100% best efforts to make the client
+                          satisfied with our services.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="v-pills-plumbing"
+                role="tabpanel"
+                aria-labelledby="v-pills-plumbing-tab"
+                tabindex="0"
+              >
+                <div className="row">
+                  <div className="col-8">
+                    <p>
+                      Plumbers install and repair pipes and fixtures that carry
+                      water, gas, or other fluids in homes and businesses. They
+                      also maintain plumbing fixtures like bathtubs and toilets
+                      and appliances such as dishwashers or heating systems.
+                    </p>
+                    <p className="mt-2">
+                      A successful Plumber needs to have experience working with
+                      various fixtures involved in their field. They should be
+                      able to identify issues within a system and solve them.
+                      It's also essential for them to have good communication
+                      skills to convey any problems.
+                    </p>
+                    <p>
+                      Plumbers collaborate with professionals like Electricians
+                      who install electrical fixtures. These individuals work in
+                      tandem to ensure their work is adequate to operate
+                      alongside the other's, keeping in mind the importance of
+                      safety when the two systems work simultaneously.{' '}
+                    </p>
+                  </div>
+                  <div className="col-4">
+                    <div class="card card-width">
+                      <img
+                        src="https://www.approvedcourse.com/wp-content/uploads/2021/07/Civil-Engineer.png"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body card-footer-bg">
+                        <p class="card-text ">
+                          We gave our 100% best efforts to make the client
+                          satisfied with our services.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div
                 class="tab-pane fade"
@@ -264,7 +355,40 @@ const HomeContainer = () => {
                 aria-labelledby="v-pills-settings-tab"
                 tabindex="0"
               >
-                ...
+                <div className="row">
+                  <div className="col-8">
+                    <p>
+                      Civil construction falls in the category of civil
+                      engineering which is all about designing, constructing and
+                      maintaining the physical and naturally built environment.
+                      Civil construction is the art of building bridges, dams,
+                      roads, airports, canals, and buildings.
+                    </p>
+                    <p className="mt-2">
+                      In today’s society, there are huge projects meant for
+                      civil construction and engineering. The infrastructure
+                      used in our daily lives all has been created because of
+                      civil construction and engineering. The roads, railways,
+                      stadiums, harbors, schools and other buildings constructed
+                      all are a contribution of civil engineering.
+                    </p>
+                  </div>
+                  <div className="col-4">
+                    <div class="card card-width">
+                      <img
+                        src="https://www.approvedcourse.com/wp-content/uploads/2021/07/Civil-Engineer.png"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body card-footer-bg">
+                        <p class="card-text ">
+                          We gave our 100% best efforts to make the client
+                          satisfied with our services.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
