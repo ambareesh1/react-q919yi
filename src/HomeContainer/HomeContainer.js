@@ -41,13 +41,13 @@ const HomeContainer = () => {
         <div class="row shadow p-3 m-3 bg-body rounded">
           <div class="d-flex align-items-start">
             <div
-              class="nav flex-column nav-pills me-3"
+              class="nav flex-column nav-pills"
               id="v-pills-tab"
               role="tablist"
               aria-orientation="vertical"
             >
               <button
-                class="nav-link active text-start"
+                class="nav-link active text-start btn-width"
                 id="v-pills-home-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#v-pills-home"
@@ -59,7 +59,7 @@ const HomeContainer = () => {
                 Info
               </button>
               <button
-                class="nav-link text-start"
+                class="nav-link text-start btn-width"
                 id="v-pills-profile-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#v-pills-profile"
@@ -71,7 +71,7 @@ const HomeContainer = () => {
                 Renewable Energy
               </button>
               <button
-                class="nav-link text-start"
+                class="nav-link text-start btn-width"
                 id="v-pills-disabled-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#v-pills-disabled"
@@ -84,7 +84,7 @@ const HomeContainer = () => {
                 Civil
               </button>
               <button
-                class="nav-link text-start"
+                class="nav-link text-start btn-width"
                 id="v-pills-messages-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#v-pills-messages"
@@ -96,7 +96,7 @@ const HomeContainer = () => {
                 Electrical
               </button>
               <button
-                class="nav-link text-start"
+                class="nav-link text-start btn-width"
                 id="v-pills-settings-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#v-pills-settings"
@@ -108,7 +108,7 @@ const HomeContainer = () => {
                 Mechanical
               </button>
               <button
-                class="nav-link text-start"
+                class="nav-link text-start btn-width"
                 id="v-pills-settings-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#v-pills-settings"
@@ -120,7 +120,7 @@ const HomeContainer = () => {
                 Fire Fighting
               </button>
               <button
-                class="nav-link text-start"
+                class="nav-link text-start btn-width"
                 id="v-pills-settings-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#v-pills-settings"
@@ -132,7 +132,7 @@ const HomeContainer = () => {
                 ELV
               </button>
               <button
-                class="nav-link text-start"
+                class="nav-link text-start btn-width"
                 id="v-pills-settings-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#v-pills-settings"
@@ -144,7 +144,7 @@ const HomeContainer = () => {
                 BIM
               </button>
             </div>
-            <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-content ms-3" id="v-pills-tabContent">
               <div
                 class="tab-pane fade show active"
                 id="v-pills-home"
@@ -202,7 +202,16 @@ const HomeContainer = () => {
                 aria-labelledby="v-pills-profile-tab"
                 tabindex="0"
               >
-                ...
+                <p>
+                  Shri Sathi Projects has carried out a few MW range solar PV
+                  projects and has been monitoring the performance for quite
+                  some time. Shri Sathi Projects office is the best example with
+                  Net metering and nearly above 60 to 70% of daily consumption
+                  for the last two years. Shri Sathi Projects can conduct pre
+                  installation study i.e solar insolation, designing of PV
+                  system and extend complete support in execution and
+                  commissioning of the system
+                </p>
               </div>
               <div
                 class="tab-pane fade"
