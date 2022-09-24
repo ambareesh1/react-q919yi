@@ -97,24 +97,36 @@ const HomeContainer = () => {
               </button>
               <button
                 class="nav-link text-start btn-width"
-                id="v-pills-settings-tab"
+                id="v-pills-mechanical-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#v-pills-settings"
+                data-bs-target="#v-pills-mechanical"
                 type="button"
                 role="tab"
-                aria-controls="v-pills-settings"
+                aria-controls="v-pills-mechanical"
                 aria-selected="false"
               >
                 Mechanical
               </button>
               <button
                 class="nav-link text-start btn-width"
-                id="v-pills-settings-tab"
+                id="v-pills-solar-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#v-pills-settings"
+                data-bs-target="#v-pills-solar"
                 type="button"
                 role="tab"
-                aria-controls="v-pills-settings"
+                aria-controls="v-pills-solar"
+                aria-selected="false"
+              >
+                Solar
+              </button>
+              <button
+                class="nav-link text-start btn-width"
+                id="v-pills-fire-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-fire"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-fire"
                 aria-selected="false"
               >
                 Fire Fighting
@@ -130,18 +142,6 @@ const HomeContainer = () => {
                 aria-selected="false"
               >
                 ELV
-              </button>
-              <button
-                class="nav-link text-start btn-width"
-                id="v-pills-settings-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-settings"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-settings"
-                aria-selected="false"
-              >
-                Solar
               </button>
             </div>
             <div class="tab-content ms-3" id="v-pills-tabContent">
@@ -334,7 +334,7 @@ const HomeContainer = () => {
                   <div className="col-4">
                     <div class="card card-width">
                       <img
-                        src="https://www.approvedcourse.com/wp-content/uploads/2021/07/Civil-Engineer.png"
+                        src="https://img.freepik.com/free-vector/frustrated-female-person-team-plumbers-bathroom-maintenance-workers-helping-woman-with-plumbing-flat-vector-illustration-repair-service-concept-banner-website-design-landing-page_74855-24141.jpg?w=996&t=st=1664033288~exp=1664033888~hmac=d2e28b4e3c3eb21b6537779540fed0113d5449751df75b53991021db3a57707f"
                         class="card-img-top"
                         alt="..."
                       />
@@ -350,34 +350,119 @@ const HomeContainer = () => {
               </div>
               <div
                 class="tab-pane fade"
-                id="v-pills-settings"
+                id="v-pills-mechanical"
                 role="tabpanel"
-                aria-labelledby="v-pills-settings-tab"
+                aria-labelledby="v-pills-mechanical-tab"
                 tabindex="0"
               >
                 <div className="row">
                   <div className="col-8">
                     <p>
-                      Civil construction falls in the category of civil
-                      engineering which is all about designing, constructing and
-                      maintaining the physical and naturally built environment.
-                      Civil construction is the art of building bridges, dams,
-                      roads, airports, canals, and buildings.
+                      Mechanical Engineers design and develop new devices while
+                      also improving existing ones. They analyze the mechanical
+                      aspects of these products, focusing on heat transfer
+                      properties or durability. Through this, they come up with
+                      solutions that will meet industry standards while still
+                      being cost-effective enough to be produced at scale
+                      without affecting their price point too drastically.
                     </p>
                     <p className="mt-2">
-                      In today’s society, there are huge projects meant for
-                      civil construction and engineering. The infrastructure
-                      used in our daily lives all has been created because of
-                      civil construction and engineering. The roads, railways,
-                      stadiums, harbors, schools and other buildings constructed
-                      all are a contribution of civil engineering.
+                      Mechanical Engineers are responsible for analyzing
+                      mechanical and thermal devices to find solutions for
+                      repairs or innovations which will help solve even more
+                      complex challenges. They often handle developing
+                      prototypes suitable enough to be tested by customers until
+                      production begins.
                     </p>
                   </div>
                   <div className="col-4">
                     <div class="card card-width">
                       <img
-                        src="https://www.approvedcourse.com/wp-content/uploads/2021/07/Civil-Engineer.png"
+                        src="https://img.collegedekhocdn.com/media/img/careers/mechanical-eng111.jpg"
                         class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body card-footer-bg">
+                        <p class="card-text ">
+                          We gave our 100% best efforts to make the client
+                          satisfied with our services.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="v-pills-solar"
+                role="tabpanel"
+                aria-labelledby="v-pills-solar-tab"
+                tabindex="0"
+              >
+                <div className="row">
+                  <div className="col-8">
+                    <p>
+                      As a solar panel installer, you will be responsible for
+                      installing and servicing solar panels on buildings and
+                      land to ensure they efficiently convert solar power into
+                      renewable energy. Most of your work as a solar panel
+                      installer will be outdoors and at height.
+                    </p>
+                    <p className="mt-2">
+                      Solar power works by converting energy from the sun into
+                      power. There are two forms of energy generated from the
+                      sun for our use – electricity and heat. Both are generated
+                      through the use of solar panels, which range in size from
+                      residential rooftops to 'solar farms' stretching over
+                      acres of rural land.
+                    </p>
+                  </div>
+                  <div className="col-4">
+                    <div class="card card-width">
+                      <img
+                        src="https://previews.123rf.com/images/stmool/stmool1610/stmool161000008/68016981-flat-design-vector-illustration-electricity-graphic-elements.jpg?fj=1"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body card-footer-bg">
+                        <p class="card-text ">
+                          We gave our 100% best efforts to make the client
+                          satisfied with our services.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="v-pills-fire"
+                role="tabpanel"
+                aria-labelledby="v-pills-fire-tab"
+                tabindex="0"
+              >
+                <div className="row">
+                  <div className="col-8">
+                    <p>
+                      A firefighter is a first responder and rescuer extensively
+                      trained in firefighting, primarily to extinguish hazardous
+                      fires that threaten life, property, and the environment as
+                      well as to rescue people and in some cases or
+                      jurisdictions also animals from dangerous situations.
+                    </p>
+                    <p className="mt-2">
+                      A Firefighter is responsible for rapidly, efficiently and
+                      safely performing various duties under emergency
+                      conditions frequently involving considerable hazard. The
+                      work includes routine duties in the maintenance of
+                      firefighting vehicles, equipment and fire service
+                      facilities.
+                    </p>
+                  </div>
+                  <div className="col-4">
+                    <div class="card card-width">
+                      <img
+                        src="https://previews.123rf.com/images/kritiya/kritiya1207/kritiya120700058/14600490-hydrant-with-water-hoses-and-fire-extinguish-equipment.jpg?fj=1"
                         alt="..."
                       />
                       <div class="card-body card-footer-bg">
