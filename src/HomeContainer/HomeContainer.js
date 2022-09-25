@@ -132,7 +132,7 @@ const HomeContainer = () => {
                 Fire Fighting
               </button>
             </div>
-            <div class="col-sm-10 ms-1 tab-content" id="v-pills-tabContent">
+            <div class="col-sm-10  tab-content" id="v-pills-tabContent">
               <div
                 class="tab-pane fade show active"
                 id="v-pills-home"
